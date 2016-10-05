@@ -10,12 +10,10 @@
     <a-scene id="theScene">
         <a-assets>
             <img id="enemy-sprite" crossorigin="" src="https://ucarecdn.com/f11bb3e6-ceb4-427c-bcaa-351cabac37d5/">
-            
-            <!--<img id="kitten" crossorigin="" src="../my-img/kitten.png">-->
-            <img id="kitten" src="https://sdykes3.github.io/forestVR/my-img/kitten.png">
-            <!--<img id="kitten2" crossorigin="" src="http://www.pngall.com/wp-content/uploads/2016/05/Kitten-Free-PNG-Image.png/">-->
 
-            <!--<a-asset-item id="tree" src="../my-img/tree.dae"></a-asset-item>-->
+            <img id="kitten" crossorigin="" src="https://sdykes3.github.io/forestVR/my-img/kitten.png">
+
+            <a-asset-item id="tree" src="https://sdykes3.github.io/forestVR/my-img/tree.dae"></a-asset-item>
         </a-assets>
 
       <a-sphere id='originalSphere' onclick="changeMyColor()" position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
@@ -36,20 +34,13 @@
       <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
       <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
 
-
-
       <!--<a-sky color="#00FF55"></a-sky>-->
-      <!--<a-sky src="../my-img/pano.jpg"></a-sky>-->
-      <!--<a-sky src="http://www.tilmanbremer.de/wp/wp-content/uploads/2011/09/kasse_tag_klein.jpg"></a-sky>-->
-      <!--<a-sky src="http://www.prism.gatech.edu/~sdykes3/6310/my-img/pano.jpg"></a-sky>-->
-      <a-sky src="https://ucarecdn.com/49f8cfbc-ee57-444b-b954-3beb1709080c/"></a-sky>
+      <a-sky src="https://sdykes3.github.io/forestVR/my-img/pano.jpg"></a-sky>
 
+      <a-image look-at-component="#cam" src="#enemy-sprite" transparent="true" position="-3 1 1"></a-image>
+      <a-image look-at-component="#cam" src="#kitten" transparent="true" position="3 1 1"></a-image>
 
-      <a-image look-at-component="#cam" src="#enemy-sprite" transparent="true" position="-3 2 1"></a-image>
-      <a-image look-at-component="#cam" src="#kitten" transparent="true" position="-2 1 1"></a-image>
-      <a-image look-at-component="#cam" src="#kitten2" transparent="true" position="0 1 2"></a-image>
-
-      <!--<a-collada-model src="#tree"></a-collada-model>-->
+      <a-collada-model src="#tree" position="3 0 -1"></a-collada-model>
 
 
       <a-entity position="0 0 3.8">
