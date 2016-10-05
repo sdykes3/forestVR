@@ -13,9 +13,10 @@
 
             <img id="kitten" crossorigin="" src="https://sdykes3.github.io/forestVR/my-img/kitten.png">
 
-            <a-asset-item id="tree" src="https://sdykes3.github.io/forestVR/my-img/Models/Tree Type3 04.dae"></a-asset-item>
-            <!--<a-asset-item id="tree" src="https://sdykes3.github.io/forestVR/my-img/assets.dae"></a-asset-item>-->
-
+            <!--<a-asset-item id="tree" src="https://sdykes3.github.io/forestVR/my-img/Models/Tree Type3 04.dae"></a-asset-item>-->
+            <a-asset-item id="tree-obj" src="https://sdykes3.github.io/forestVR/my-img/tree1/2632.obj"></a-asset-item>
+            <a-asset-item id="tree-mtl" src="https://sdykes3.github.io/forestVR/my-img/tree1/2632.mtl"></a-asset-item>
+        
         </a-assets>
 
       <a-sphere id='originalSphere' onclick="changeMyColor()" position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
@@ -42,8 +43,8 @@
       <a-image look-at-component="#cam" src="#enemy-sprite" transparent="true" position="-3 1 1"></a-image>
       <a-image look-at-component="#cam" src="#kitten" transparent="true" position="3 1 1"></a-image>
 
-      <a-collada-model src="#tree" position="3 0 -1"></a-collada-model>
-
+      <!--<a-collada-model src="#tree" position="3 0 -1"></a-collada-model>-->
+      <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
 
       <a-entity position="0 0 3.8">
         <a-camera id="cam"></a-camera>
