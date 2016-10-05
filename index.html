@@ -20,28 +20,18 @@
         
         </a-assets>
 
-      <a-sphere id='originalSphere' onclick="changeMyColor()" position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
-      
-      <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-
-      <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4">  
-          <a-animation attribute="rotation"
-                       delay="0"
-                       dur="5000"
-                       to="-90 0 360"
-                       repeat="indefinite"
-                       easing="linear">
-           </a-animation>    
-      </a-plane>
-
-      
-      <!--<a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>-->
-
       <!--<a-sky color="#00FF55"></a-sky>-->
       <a-sky src="https://sdykes3.github.io/forestVR/my-img/pano.jpg"></a-sky>
 
+      <a-sphere id='originalSphere' onclick="changeMyColor()" position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
+  
       <a-image look-at-component="#cam" src="#enemy-sprite" transparent="true" position="-3 1 1"></a-image>
       <a-image look-at-component="#cam" src="#kitten" transparent="true" position="3 1 1"></a-image>
+
+
+      <!--<a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>-->
+    
+
 
       <!--<a-collada-model src="#tree" position="3 0 -1"></a-collada-model>-->
       <!--<a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>-->
@@ -86,13 +76,13 @@
 
 
         //random position sphere
-        var rando = document.createElement("a-sphere");
-        var xPos = (Math.random() * 10) - 5; //Math.random() is between 0 and 1; result will be between -5 and 5
-        rando.setAttribute("position", xPos.toString() + " 2.5 1");
-        rando.setAttribute("rotation", "0 45 0");
-        rando.setAttribute("radius", "1");
-        rando.setAttribute("color", "#009900");
-        scene.appendChild(rando);
+        // var rando = document.createElement("a-sphere");
+        // var xPos = (Math.random() * 10) - 5; //Math.random() is between 0 and 1; result will be between -5 and 5
+        // rando.setAttribute("position", xPos.toString() + " 2.5 1");
+        // rando.setAttribute("rotation", "0 45 0");
+        // rando.setAttribute("radius", "1");
+        // rando.setAttribute("color", "#009900");
+        // scene.appendChild(rando);
 
 
     </script>
