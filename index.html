@@ -14,28 +14,28 @@
             <img id="kitten" crossorigin="" src="https://sdykes3.github.io/forestVR/my-img/kitten.png">
 
             <!--<a-asset-item id="tree" src="https://sdykes3.github.io/forestVR/my-img/Models/Tree Type3 04.dae"></a-asset-item>-->
-            <a-asset-item id="tree-obj" src="https://sdykes3.github.io/forestVR/my-img/tree1/2632.obj"></a-asset-item>
-            <a-asset-item id="tree-mtl" src="https://sdykes3.github.io/forestVR/my-img/tree1/2632.mtl"></a-asset-item>
+            
+            <!--<a-asset-item id="tree-obj" src="https://sdykes3.github.io/forestVR/my-img/tree1/2632.obj"></a-asset-item>-->
+            <!--<a-asset-item id="tree-mtl" src="https://sdykes3.github.io/forestVR/my-img/tree1/2632.mtl"></a-asset-item>-->
         
         </a-assets>
 
       <a-sphere id='originalSphere' onclick="changeMyColor()" position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-box opacity="0" position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1"  color="#4CC3D9">
-          <a-animation attribute="material.opactiy"
-            begin="0"
-            dur="900"
-            ease="linear"
-            from="0"
-            to="1"
-            repeat="indefinite"
-            direction="alternate">
-          </a-animation>
-      </a-box>
-      <a-entity id="fading-cube" geometry="primitive: box" material="opacity: 1">
-  <a-animation attribute="material.opacity" begin="fade" to="0"></a-animation>
-</a-entity>
+      
       <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+
+      <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4">  
+          <a-animation attribute="rotation"
+                       delay="0"
+                       dur="5000"
+                       to="-90 0 360"
+                       repeat="indefinite"
+                       easing="linear">
+           </a-animation>    
+      </a-plane>
+
+      
+      <!--<a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>-->
 
       <!--<a-sky color="#00FF55"></a-sky>-->
       <a-sky src="https://sdykes3.github.io/forestVR/my-img/pano.jpg"></a-sky>
@@ -44,10 +44,12 @@
       <a-image look-at-component="#cam" src="#kitten" transparent="true" position="3 1 1"></a-image>
 
       <!--<a-collada-model src="#tree" position="3 0 -1"></a-collada-model>-->
-      <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
+      <!--<a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>-->
 
       <a-entity position="0 0 3.8">
-        <a-camera id="cam"></a-camera>
+        <a-camera id="cam">
+          <a-cursor color="#2E3A87">
+        </a-camera>
       </a-entity>
 
     </a-scene>
@@ -58,7 +60,6 @@
         function changeMyColor() {
             document.getElementById("originalSphere").setAttribute("color", "#4CC3D9");
         }
-        document.querySelector('#fading-cube').emit('fade');
 
         //adding a box as a child
         var addMe = document.createElement('a-box');
@@ -91,11 +92,7 @@
         rando.setAttribute("rotation", "0 45 0");
         rando.setAttribute("radius", "1");
         rando.setAttribute("color", "#009900");
-
         scene.appendChild(rando);
-
-
-        //flat images
 
 
     </script>
