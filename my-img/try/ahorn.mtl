@@ -1,0 +1,26 @@
+# Wavefront MTL file
+# Creator: Ultimate Unwrap3D Pro v3.50.03
+# URL: http://www.unwrap3d.com
+# Time: Thu Sep 18 11:57:35 2014
+# num_materials: 2
+
+newmtl leafmat
+Ka 0.340000 0.340000 0.340000
+Kd 1.000000 1.000000 1.000000
+Ks 0.130000 0.130000 0.130000
+d 1.000000
+illum 2
+Ns 0.000000
+map_Kd leaf0002.png
+
+newmtl barkmat
+Ka 0.340000 0.340000 0.340000
+Kd 1.000000 1.000000 1.000000
+Ks 0.130000 0.130000 0.130000
+d 1.000000
+illum 2
+Ns 0.000000
+map_Kd bark0001.jpg
+map_Bump ahornrindeNM.png
+
+# num_materials: 2
