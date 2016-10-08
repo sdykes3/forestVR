@@ -2,97 +2,32 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hello, World! • A-Frame</title>
-    <meta name="description" content="Hello, World! • A-Frame">
-    <script src="dist/aframe.js"></script>
+    <title>Hello world!</title>
+    <meta name="description" content="Hello world!">
+    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene id="theScene">
-        <a-assets>
-            <img id="enemy-sprite" crossorigin="" src="https://ucarecdn.com/f11bb3e6-ceb4-427c-bcaa-351cabac37d5/">
-
-            <img id="kitten" crossorigin="" src="https://sdykes3.github.io/forestVR/my-img/kitten.png">
-
-            <!--<a-asset-item id="tree" src="https://sdykes3.github.io/forestVR/my-img/Models/Tree Type3 04.dae"></a-asset-item>-->
-           
-            <!--<a-asset-item id="tree" src="https://sdykes3.github.io/forestVR/my-img/trees/LowPolyPine/ST_tree_type3_04.dae"></a-asset-item>-->
-            <!--<a-asset-item id="tree" src="https://sdykes3.github.io/forestVR/my-img/trees/Tree_2633/GRP_tree_2633.dae"></a-asset-item>-->
-            
-            <!--<a-asset-item id="tree-obj" src="https://sdykes3.github.io/forestVR/my-img/yobi/TreeTest01.obj"></a-asset-item>-->
-            <!--<a-asset-item id="tree-mtl" src="https://sdykes3.github.io/forestVR/my-img/yobi/TreeTest01.mtl"></a-asset-item>-->
-
-            <!--<a-asset-item id="tree-obj" src="https://sdykes3.github.io/forestVR/my-img/tree1/2632.obj"></a-asset-item>-->
-            <!--<a-asset-item id="tree-mtl" src="https://sdykes3.github.io/forestVR/my-img/tree1/2632.mtl"></a-asset-item>-->
-        
-        </a-assets>
-
-      <!--<a-sky color="#00FF55"></a-sky>-->
-      <a-sky src="https://sdykes3.github.io/forestVR/my-img/pano.jpg"></a-sky>
-
-      <a-sphere id='originalSphere' onclick="changeMyColor()" position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
-  
-      <a-image look-at-component="#cam" src="#enemy-sprite" transparent="true" position="-3 1 1"></a-image>
-      <a-image look-at-component="#cam" src="#kitten" transparent="true" position="3 1 1"></a-image>
-
-
-      <!--<a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>-->
-    
-
-
-      <!--<a-collada-model src="#tree" position="3 0 -1"></a-collada-model>-->
-
-      <!--<a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl" position="3 0 -1"></a-entity>-->
-
-      <a-entity position="0 0 3.8">
-        <a-camera id="cam">
-          <a-cursor color="#2E3A87">
-        </a-camera>
-      </a-entity>
-
-    </a-scene>
-  </body>
-
-    <script>
-
-        function changeMyColor() {
-            document.getElementById("originalSphere").setAttribute("color", "#4CC3D9");
-        }
-
-        //adding a box as a child
-        var addMe = document.createElement('a-box');
-        addMe.setAttribute("position", "-1 2.5 1");
-        addMe.setAttribute("rotation", "0 45 0");
-        addMe.setAttribute("width", "1");
-        addMe.setAttribute("height", "1");
-        addMe.setAttribute("depth", "1");
-        addMe.setAttribute("color", "#4CC3D9");
-        //adding a box as a child, but to something different
-        var addMeSimilarly = document.createElement('a-box');
-        addMeSimilarly.setAttribute("position", "-1 2.5 1");
-        addMeSimilarly.setAttribute("rotation", "0 45 0");
-        addMeSimilarly.setAttribute("width", "1");
-        addMeSimilarly.setAttribute("height", "1");
-        addMeSimilarly.setAttribute("depth", "1");
-        addMeSimilarly.setAttribute("color", "#4CC3D9");
-
-        var scene = document.getElementById("theScene");
-        var element = document.getElementById("originalSphere");
-
-        scene.appendChild(addMe); //added with origin in middle of scene
-        element.appendChild(addMeSimilarly); //added with origin in middle of sphere
-
-
-        //random position sphere
-        // var rando = document.createElement("a-sphere");
-        // var xPos = (Math.random() * 10) - 5; //Math.random() is between 0 and 1; result will be between -5 and 5
-        // rando.setAttribute("position", xPos.toString() + " 2.5 1");
-        // rando.setAttribute("rotation", "0 45 0");
-        // rando.setAttribute("radius", "1");
-        // rando.setAttribute("color", "#009900");
-        // scene.appendChild(rando);
-
-
-    </script>
-
-    
+<a-scene name="KanauScene">
+  <a-assets>
+    <a-asset-item id="Cube-obj" src="./models/Cube.obj"></a-asset-item>
+  </a-assets>
+  <a-sky radius="5000" color="#314D79"></a-sky>
+  <a-entity position="0 1 10" name="Main Camera" tag="MainCamera">
+    <a-camera far="1000" near="0.3" look-controls-enabled="true" wasd-controls-enabled="true">
+      <a-cursor fuse="False" max-distance="1000" timeout="1500"></a-cursor>
+    </a-camera>
+  </a-entity>
+  <a-light position="0 3 0" rotation="-50.00001 -330 -1.328236E-06" name="Directional Light" type="directional" color="#FFF4D6"></a-light>
+  <a-entity name="Cube" obj-model="obj: #Cube-obj" material="shader: standard; metalness: 0"></a-entity>
+  <a-entity position="-2.71 0 2.29" name="Sphere">
+    <a-sphere radius="0.5" material="shader: standard; metalness: 0"></a-sphere>
+  </a-entity>
+  <a-entity position="0 4.42 0" name="Cube (1)" obj-model="obj: #Cube-obj" material="shader: standard; metalness: 0"></a-entity>
+  <a-entity position="0 -4.63 0" name="Cube (2)" obj-model="obj: #Cube-obj" material="shader: standard; metalness: 0"></a-entity>
+  <a-entity position="3.95 0 -3.04" name="Sphere (1)">
+    <a-sphere radius="0.5" material="shader: standard; metalness: 0"></a-sphere>
+  </a-entity>
+  <a-light name="AmbientLight" type="ambient" color="#363942"></a-light>
+</a-scene>
+</body>
 </html>
