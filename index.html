@@ -11,12 +11,12 @@
   <a-assets>
     <a-asset-item id="Cube-obj" src="./models/Cube.obj"></a-asset-item>
     <a-asset-item id="ST_pine_type1_04-obj" src="./models/ST_pine_type1_04.obj"></a-asset-item>
+    <a-asset-item id="ST_tree_3_04-obj" src="./models/ST_tree_3_04.obj"></a-asset-item>
     <a-asset-item id="ST_treebase_2633-obj" src="./models/ST_treebase_2633.obj"></a-asset-item>
     <a-asset-item id="ST_treebranch_2633-obj" src="./models/ST_treebranch_2633.obj"></a-asset-item>
     <a-asset-item id="ST_treeleaves_A_2633-obj" src="./models/ST_treeleaves_A_2633.obj"></a-asset-item>
     <a-asset-item id="ST_treeleaves_B_2633-obj" src="./models/ST_treeleaves_B_2633.obj"></a-asset-item>
     <a-asset-item id="ST_treeleaves_C_2633-obj" src="./models/ST_treeleaves_C_2633.obj"></a-asset-item>
-    <a-asset-item id="ST_tree_3_04-obj" src="./models/ST_tree_3_04.obj"></a-asset-item>
   </a-assets>
   <a-sky radius="5000" color="#314D79"></a-sky>
   <a-entity position="0 1 10" name="Main Camera" tag="MainCamera">
@@ -24,7 +24,7 @@
       <a-cursor fuse="False" max-distance="1000" timeout="1500"></a-cursor>
     </a-camera>
   </a-entity>
-  <a-entity position="0 3 0" rotation="-50.00001 -330 -1.328236E-06" name="Directional Light"></a-entity>
+  <a-light position="0 3 0" rotation="-50.00001 -330 -1.328236E-06" name="Directional Light" type="directional" color="#FFF4D6"></a-light>
   <a-entity name="Cube" obj-model="obj: #Cube-obj" material="shader: standard; metalness: 0"></a-entity>
   <a-entity position="-2.71 0 2.29" name="Sphere">
     <a-sphere radius="0.5" material="shader: standard; metalness: 0"></a-sphere>
@@ -34,15 +34,15 @@
   <a-entity position="3.95 0 -3.04" name="Sphere (1)">
     <a-sphere radius="0.5" material="shader: standard; metalness: 0"></a-sphere>
   </a-entity>
-  <a-entity position="-1.249576 -1.630983 -3.54019" name="ST_pine_type1_04" obj-model="obj: #ST_pine_type1_04-obj" material="shader: standard; color: #CCCCCC; metalness: 0; roughness: 1; src: url(./images/Colorsheet Tree Normal.png)"></a-entity>
-  <a-entity position="4 -5 0" scale="0.1 0.1 0.1" name="GRP_tree_2633">
+  <a-entity position="13 -1.630983 -3.54019" name="ST_pine_type1_04" obj-model="obj: #ST_pine_type1_04-obj" material="shader: standard; color: #CCCCCC; metalness: 0; roughness: 1; src: url(./images/Colorsheet Tree Normal.png)"></a-entity>
+  <a-entity position="-5 0 0" name="tree" obj-model="obj: #ST_tree_3_04-obj" material="shader: standard; color: #CCCCCC; metalness: 0; roughness: 1; src: url(./images/Colorsheet Tree Normal.png)"></a-entity>
+  <a-entity position="2 -5 0" scale="0.1 0.1 0.1" name="GRP_tree_2633">
     <a-entity name="ST_treebase_2633" obj-model="obj: #ST_treebase_2633-obj" material="shader: standard; color: #CCCCCC; metalness: 0; roughness: 1; src: url(./images/spschors.jpg)"></a-entity>
     <a-entity name="ST_treebranch_2633" obj-model="obj: #ST_treebranch_2633-obj" material="shader: standard; color: #CCCCCC; metalness: 0; src: url(./images/spschors.jpg)"></a-entity>
     <a-entity name="ST_treeleaves_A_2633" obj-model="obj: #ST_treeleaves_A_2633-obj" material="shader: standard; color: #CCCCCC; metalness: 0; roughness: 1; src: url(./images/spar1.tif)"></a-entity>
     <a-entity name="ST_treeleaves_B_2633" obj-model="obj: #ST_treeleaves_B_2633-obj" material="shader: standard; color: #CCCCCC; metalness: 0; roughness: 1; src: url(./images/spar1.tif)"></a-entity>
     <a-entity name="ST_treeleaves_C_2633" obj-model="obj: #ST_treeleaves_C_2633-obj" material="shader: standard; color: #CCCCCC; metalness: 0; roughness: 1; src: url(./images/spar1.tif)"></a-entity>
   </a-entity>
-  <a-entity position="-5 0 0" name="tree" obj-model="obj: #ST_tree_3_04-obj" material="shader: standard; color: #CCCCCC; metalness: 0; roughness: 1; src: url(./images/Colorsheet Tree Normal.png)"></a-entity>
   <a-entity position="-319 -3.03 335" scale="0.0001 1 0.01" name="Terrain"></a-entity>
   <a-light name="AmbientLight" type="ambient" color="#363942"></a-light>
 </a-scene>
