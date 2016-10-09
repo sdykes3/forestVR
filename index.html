@@ -4,47 +4,26 @@
     <meta charset="utf-8">
     <title>Hello world!</title>
     <meta name="description" content="Hello world!">
-    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/latest/aframe.js"></script>
   </head>
   <body>
-<a-scene name="KanauScene">
-  <a-assets>
-    <a-asset-item id="Cube-obj" src="./models/Cube.obj"></a-asset-item>
-    <a-asset-item id="ST_pine_type1_04-obj" src="./models/ST_pine_type1_04.obj"></a-asset-item>
-    <a-asset-item id="ST_tree_3_04-obj" src="./models/ST_tree_3_04.obj"></a-asset-item>
-    <a-asset-item id="ST_treebase_2633-obj" src="./models/ST_treebase_2633.obj"></a-asset-item>
-    <a-asset-item id="ST_treebranch_2633-obj" src="./models/ST_treebranch_2633.obj"></a-asset-item>
-    <a-asset-item id="ST_treeleaves_A_2633-obj" src="./models/ST_treeleaves_A_2633.obj"></a-asset-item>
-    <a-asset-item id="ST_treeleaves_B_2633-obj" src="./models/ST_treeleaves_B_2633.obj"></a-asset-item>
-    <a-asset-item id="ST_treeleaves_C_2633-obj" src="./models/ST_treeleaves_C_2633.obj"></a-asset-item>
-  </a-assets>
-  <a-sky radius="5000" color="#314D79"></a-sky>
-  <a-entity position="0 1 10" name="Main Camera" tag="MainCamera">
-    <a-camera far="1000" near="0.3" look-controls-enabled="true" wasd-controls-enabled="true">
-      <a-cursor fuse="False" max-distance="1000" timeout="1500"></a-cursor>
-    </a-camera>
-  </a-entity>
-  <a-entity position="0 3 0" rotation="-17.64201 -41.68482 47.62206" name="Directional Light"></a-entity>
-  <a-entity name="Cube" obj-model="obj: #Cube-obj" material="shader: standard; metalness: 0"></a-entity>
-  <a-entity position="-2.71 0 2.29" name="Sphere">
-    <a-sphere radius="0.5" material="shader: standard; metalness: 0"></a-sphere>
-  </a-entity>
-  <a-entity position="0 4.42 0" name="Cube (1)" obj-model="obj: #Cube-obj" material="shader: standard; metalness: 0"></a-entity>
-  <a-entity position="0 -4.63 0" name="Cube (2)" obj-model="obj: #Cube-obj" material="shader: standard; metalness: 0"></a-entity>
-  <a-entity position="3.95 0 -3.04" name="Sphere (1)">
-    <a-sphere radius="0.5" material="shader: standard; metalness: 0"></a-sphere>
-  </a-entity>
-  <a-entity position="-8 -1.630983 -3.54019" name="ST_pine_type1_04" obj-model="obj: #ST_pine_type1_04-obj" material="shader: standard; color: #CCCCCC; metalness: 0; roughness: 1; src: url(./images/Colorsheet Tree Normal.png)"></a-entity>
-  <a-entity position="-5 0 0" name="tree" obj-model="obj: #ST_tree_3_04-obj" material="shader: standard; color: #CCCCCC; metalness: 0; roughness: 1; src: url(./images/Colorsheet Tree Normal.png)"></a-entity>
-  <a-entity position="2 -5 0" scale="0.1 0.1 0.1" name="GRP_tree_2633">
-    <a-entity name="ST_treebase_2633" obj-model="obj: #ST_treebase_2633-obj" material="shader: standard; color: #CCCCCC; metalness: 0; roughness: 1; src: url(./images/spschors.jpg)"></a-entity>
-    <a-entity name="ST_treebranch_2633" obj-model="obj: #ST_treebranch_2633-obj" material="shader: standard; color: #CCCCCC; metalness: 0; src: url(./images/spschors.jpg)"></a-entity>
-    <a-entity name="ST_treeleaves_A_2633" obj-model="obj: #ST_treeleaves_A_2633-obj" material="shader: standard; color: #CCCCCC; metalness: 0; roughness: 1; src: url(./images/spar1.tif)"></a-entity>
-    <a-entity name="ST_treeleaves_B_2633" obj-model="obj: #ST_treeleaves_B_2633-obj" material="shader: standard; color: #CCCCCC; metalness: 0; roughness: 1; src: url(./images/spar1.tif)"></a-entity>
-    <a-entity name="ST_treeleaves_C_2633" obj-model="obj: #ST_treeleaves_C_2633-obj" material="shader: standard; color: #CCCCCC; metalness: 0; roughness: 1; src: url(./images/spar1.tif)"></a-entity>
-  </a-entity>
-  <a-entity position="-319 -3.03 335" scale="0.0001 1 0.01" name="Terrain"></a-entity>
-  <a-light name="AmbientLight" type="ambient" color="#363942"></a-light>
-</a-scene>
-</body>
+    <a-scene stats="true">
+<a-sky color="#314D79" ></a-sky>
+      <a-entity loader="src: url(models/default.obj); format: obj" position="-5.776317 -0.5434437 -23.19" material="shader: standard; repeat: 1; color: #FDFFAA; metalness: 0; roughness: 0.5; transparent: false; opacity: 1; side: double; "></a-entity>
+      <a-entity loader="src: url(models/default_MeshPart1.obj); format: obj" position="-0.02553356 -0.72 -19.71" material="shader: standard; repeat: 1; color: #FDFFAA; metalness: 0; roughness: 0.5; transparent: false; opacity: 1; side: double; "></a-entity>
+      <a-entity loader="src: url(models/default_MeshPart0.obj); format: obj" position="-0.02553356 -0.72 -19.71" material="shader: standard; repeat: 1; color: #FDFFAA; metalness: 0; roughness: 0.5; transparent: false; opacity: 1; side: double; "></a-entity>
+      <a-entity loader="src: url(models/_face.obj); format: obj" position="-3.642127 -0.8123207 -18.78816" material="shader: standard; src: url(images/utc_all2.png); repeat: 1; color: #FFFFFF; side: double; "></a-entity>
+      <a-entity loader="src: url(models/_eye.obj); format: obj" rotation="270 0 0" position="-3.642127 -0.8123207 -18.78816" material="shader: standard; src: url(images/utc_all2.png); repeat: 1; color: #FFFFFF; side: double; "></a-entity>
+      <a-entity loader="src: url(models/_body.obj); format: obj" rotation="270 0 0" position="-3.642127 -0.8123207 -18.78816" material="shader: standard; src: url(images/utc_all2.png); repeat: 1; color: #FFFFFF; side: double; "></a-entity>
+      <a-entity loader="src: url(models/_Fhair2.obj); format: obj" rotation="270 0 0" position="-3.642127 -0.8123207 -18.78816" material="shader: standard; src: url(images/utc_all2.png); repeat: 1; color: #FFFFFF; side: double; "></a-entity>
+      <a-entity loader="src: url(models/_head.obj); format: obj" rotation="270 0 0" position="-3.642127 -0.8123207 -18.78816" material="shader: standard; src: url(images/utc_all2.png); repeat: 1; color: #FFFFFF; side: double; "></a-entity>
+      <a-entity loader="src: url(models/_Fhair.obj); format: obj" rotation="270 0 0" position="-3.642127 -0.8123207 -18.78816" material="shader: standard; src: url(images/utc_all2.png); repeat: 1; color: #FFFFFF; side: double; "></a-entity>
+      <a-entity geometry="primitive: box; width: 1; height: 1; depth: 1" position="-3.41 -0.35 -22.93" material="shader: flat; repeat: 1; color: #FF7070; transparent: true; opacity: 0.641; "></a-entity>
+      <a-light type=directional; intensity=1.2 color=#FFFFFF position="0.07331315 0.0209977 0.9970881" ></a-light>
+      <a-camera position="-3.01 0.83 -16.15"  cursor-color=#FFFF58 wasd-controls-enabled=true fov=80 near=0.5 far=10000 cursor-maxdistance=1000 cursor-offset=1 cursor-opacity=1 cursor-scale1 look-controls-enabled=true></a-camera>
+      <a-entity geometry="primitive: box; width: 1; height: 1; depth: 1" position="-0.289 0.023 -22.44" material="shader: standard; repeat: 1; color: #B376FF; metalness: 1; roughness: 0.231; transparent: false; opacity: 1; side: double; "></a-entity>
+      <a-entity geometry="primitive: box; width: 4.360001; height: 0.18; depth: 1.4" rotation="0 -47.75 -22.39" position="-1.946 -0.55 -22.43" material="shader: flat; repeat: 1; color: #FF7070; transparent: true; opacity: 0.641; "></a-entity>
+      <a-entity geometry="primitive: sphere; radius: 1" rotation="0 0 -25.27" position="-1.5 0.9210528 -21.95238" material="shader: standard; repeat: 1; color: #B376FF; metalness: 1; roughness: 0.231; transparent: false; opacity: 1; side: double; "></a-entity>
+    </a-scene stats="true">
+  </body>
 </html>
