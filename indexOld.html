@@ -27,7 +27,7 @@
             <!--<a-asset-item id="tree-obj" src="https://sdykes3.github.io/forestVR/my-img/tree1/2632.obj"></a-asset-item>-->
             <!--<a-asset-item id="tree-mtl" src="https://sdykes3.github.io/forestVR/my-img/tree1/2632.mtl"></a-asset-item>-->
 
-            <audio id="forestSound" src="https://sdykes3.github.io/forestVR/my-img/forestBest.wav">
+            <audio id="forestSound" src="https://sdykes3.github.io/forestVR/my-img/forestBest.wav"></audio>
         
         </a-assets>
 
@@ -35,8 +35,10 @@
 
       <a-sky src="https://sdykes3.github.io/forestVR/my-img/trees.jpg"></a-sky>
 
-      <a-entity id="river" geometry="primitive: plane" material="color: blue"
-          position="-10 0 0" sound="src: https://sdykes3.github.io/forestVR/my-img/forestBest.wav; autoplay: true"></a-entity>
+<!--       <a-entity id="river" geometry="primitive: plane" material="color: blue"
+          position="0 1 1" sound="src: https://sdykes3.github.io/forestVR/my-img/forestBest.wav; on: click"></a-entity>
+ -->
+      <a-entity sound="autoplay: true; src: #forestSound;"></a-entity>
 <!-- 
       <a-sphere id='originalSphere' sound="src: https://sdykes3.github.io/forestVR/my-img/forestBest.wav; on: click" position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere> -->
 
