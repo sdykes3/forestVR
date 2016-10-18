@@ -9,9 +9,9 @@
   <body>
     <a-scene id="theScene">
         <a-assets>
-            <img id="enemy-sprite" crossorigin="" src="https://ucarecdn.com/f11bb3e6-ceb4-427c-bcaa-351cabac37d5/">
+            <!-- <img id="enemy-sprite" crossorigin="" src="https://ucarecdn.com/f11bb3e6-ceb4-427c-bcaa-351cabac37d5/"> -->
 
-            <img id="kitten" crossorigin="" src="https://sdykes3.github.io/forestVR/my-img/kitten.png">
+            <!-- <img id="kitten" crossorigin="" src="https://sdykes3.github.io/forestVR/my-img/kitten.png"> -->
 
             <!--<a-asset-item id="tree" src="https://sdykes3.github.io/forestVR/my-img/Models/Tree Type3 04.dae"></a-asset-item>-->
            
@@ -21,21 +21,26 @@
             <!--<a-asset-item id="tree-obj" src="https://sdykes3.github.io/forestVR/my-img/yobi/TreeTest01.obj"></a-asset-item>-->
             <!--<a-asset-item id="tree-mtl" src="https://sdykes3.github.io/forestVR/my-img/yobi/TreeTest01.mtl"></a-asset-item>-->
 
-            <a-asset-item id="tree-obj" src="https://sdykes3.github.io/forestVR/my-img/try/ahorn.obj"></a-asset-item>
-            <a-asset-item id="tree-mtl" src="https://sdykes3.github.io/forestVR/my-img/try/ahorn.mtl"></a-asset-item>
+            <!-- <a-asset-item id="tree-obj" src="https://sdykes3.github.io/forestVR/my-img/try/ahorn.obj"></a-asset-item> -->
+            <!-- <a-asset-item id="tree-mtl" src="https://sdykes3.github.io/forestVR/my-img/try/ahorn.mtl"></a-asset-item> -->
 
             <!--<a-asset-item id="tree-obj" src="https://sdykes3.github.io/forestVR/my-img/tree1/2632.obj"></a-asset-item>-->
             <!--<a-asset-item id="tree-mtl" src="https://sdykes3.github.io/forestVR/my-img/tree1/2632.mtl"></a-asset-item>-->
+
+            <audio id="forestSound" src="https://sdykes3.github.io/forestVR/my-img/forestBest.wav">
         
         </a-assets>
 
       <!--<a-sky color="#00FF55"></a-sky>-->
-      <a-sky src="https://sdykes3.github.io/forestVR/my-img/pano.jpg"></a-sky>
+      <a-sky src="https://sdykes3.github.io/forestVR/my-img/trees.jpg"></a-sky>
 
       <a-sphere id='originalSphere' onclick="changeMyColor()" position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
+
+      <a-entity sound="https://sdykes3.github.io/forestVR/my-img/forestBest.wav; autoplay: true; loop: true"></a-entity>
+
   
-      <a-image look-at-component="#cam" src="#enemy-sprite" transparent="true" position="-3 1 1"></a-image>
-      <a-image look-at-component="#cam" src="#kitten" transparent="true" position="3 1 1"></a-image>
+<!--       <a-image look-at-component="#cam" src="#enemy-sprite" transparent="true" position="-3 1 1"></a-image>
+      <a-image look-at-component="#cam" src="#kitten" transparent="true" position="3 1 1"></a-image> -->
 
 
       <!--<a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>-->
@@ -44,7 +49,7 @@
 
       <!--<a-collada-model src="#tree" position="3 0 -1"></a-collada-model>-->
 
-      <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl" position="3 0 -1"></a-entity>
+      <!-- <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl" position="3 0 -1"></a-entity> -->
 
       <a-entity position="0 0 3.8">
         <a-camera id="cam">
