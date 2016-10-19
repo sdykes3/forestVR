@@ -97,6 +97,9 @@ function setInitialText()
 
     console.log(locationMessages[currentMessage]);
     console.log(progressMessages[currentMessage]);
+    console.log(geolocationOptions);
+    console.log(checkReceivedLocation);
+    console.log(positionData);
 
 }
 
