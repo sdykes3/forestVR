@@ -15,9 +15,9 @@
 
 var sceneOneStuff;
 
-var leftText;  //status text.
-var rightText; //progress text.
-var debugText;
+// var leftText;  //status text.
+// var rightText; //progress text.
+// var debugText;
 
 var panoElement;
 
@@ -86,24 +86,17 @@ var geolocationOptions = {
 
 
 
-
-
-
-
-
-
-
-
-
-
 //This file includes the functions that use the variables declared in
 //the variables file.
 
 function setInitialText()
 {
 
-    leftText.setAttribute('text', locationMessages[currentMessage] );
-    rightText.setAttribute('text', progressMessages[currentMessage] );
+    // leftText.setAttribute('text', locationMessages[currentMessage] );
+    // rightText.setAttribute('text', progressMessages[currentMessage] );
+
+    console.log(locationMessages[currentMessage]);
+    console.log(progressMessages[currentMessage]);
 
 }
 
@@ -143,8 +136,11 @@ function updateScene()
       isJourneyDone=true;
 
       //Updating to the final messages.
-      leftText.setAttribute('text', locationMessages[currentMessage] );
-      rightText.setAttribute('text', progressMessages[currentMessage] );
+      // leftText.setAttribute('text', locationMessages[currentMessage] );
+      // rightText.setAttribute('text', progressMessages[currentMessage] );
+
+      console.log(locationMessages[currentMessage]);
+      console.log(progressMessages[currentMessage]);
 
 
       // //Making a few more changes.
@@ -160,8 +156,10 @@ function updateScene()
         //You have not reached the last area yet.
 
         //Updating the messages.
-        leftText.setAttribute('text', locationMessages[currentMessage] );
-        rightText.setAttribute('text', progressMessages[currentMessage] );
+        // leftText.setAttribute('text', locationMessages[currentMessage] );
+        // rightText.setAttribute('text', progressMessages[currentMessage] );
+        console.log(locationMessages[currentMessage]);
+        console.log(progressMessages[currentMessage]);
 
 
         //Making the animation changes.
@@ -211,10 +209,24 @@ function error(err) {
     //Send error details to the console.
     console.warn('ERROR(' + err.code + '): ' + err.message);
    //Displaying an error message.
-    var messageElement= document.getElementById("choiceMsg");
-    messageElement.innerHTML = "<p>You weren't able to get the geolocation.<br> Check the console for more detail.</p>";
+    // var messageElement= document.getElementById("choiceMsg");
+    // messageElement.innerHTML = "<p>You weren't able to get the geolocation.<br> Check the console for more detail.</p>";
 
 }
+
+
+function circleDistance(lon1, lat1, lon2, lat2) {
+  var R = 6371; // Radius of the earth in km
+  var dLat = (lat2-lat1).toRad();  // Javascript functions in radians
+  var dLon = (lon2-lon1).toRad();
+  var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+          Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) *
+          Math.sin(dLon/2) * Math.sin(dLon/2);
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  var d = R * c; // Distance in km
+  return d;
+}
+
 
 //This function is the one that determines whether to change the scenery or not.
 //It gets the distance between our current location and our chosen location.
@@ -251,7 +263,13 @@ function checkReceivedLocation(positionData)
           resultText+="Location number "+(targetLocation+1)+" hasn't been reached yet.";
         }
 
-        debugText.setAttribute('text', resultText);
+        //debugText.setAttribute('text', resultText);
+        console.log(resultText);
 
 }
+
+
+
+
+
 

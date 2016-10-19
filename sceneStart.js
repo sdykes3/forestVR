@@ -56,9 +56,9 @@ function run () {
   sceneOneStuff = document.getElementById("sceneOneStuff");
 
 
-  leftText=document.getElementById("locationText");  //status, or current location text.
-  rightText=document.getElementById("progressText"); //progress text.
-  debugText=document.getElementById("debugText"); //progress text.
+  // leftText=document.getElementById("locationText");  //status, or current location text.
+  // rightText=document.getElementById("progressText"); //progress text.
+  // debugText=document.getElementById("debugText"); //progress text.
 
   panoElement=document.getElementById("pano");
 
