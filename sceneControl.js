@@ -147,12 +147,12 @@ function updateScene()
       rightText.setAttribute('text', progressMessages[currentMessage] );
 
 
-      //Making a few more changes.
-      boxAnimElement.emit("stop!");
-      boxElement.setAttribute('color','purple');
-      cylElement.setAttribute('opacity', '0.5');
-      panoElement.setAttribute("src", "#century");
-      panoElement.setAttribute('color','pink');
+      // //Making a few more changes.
+      // boxAnimElement.emit("stop!");
+      // boxElement.setAttribute('color','purple');
+      // cylElement.setAttribute('opacity', '0.5');
+      // panoElement.setAttribute("src", "#century");
+      // panoElement.setAttribute('color','pink');
     }
 
     else{
@@ -175,10 +175,10 @@ function updateScene()
             //The texts are updated.(already did this above.)
             //also, change the panorama.
 
-            sphereAnimElement.emit("move!");
-            boxAnimElement.emit("fade!");
-            panoElement.setAttribute("src", "#museum");
-            cylElement.setAttribute('color', 'pink');
+            // sphereAnimElement.emit("move!");
+            // boxAnimElement.emit("fade!");
+            // panoElement.setAttribute("src", "#museum");
+            // cylElement.setAttribute('color', 'pink');
 
         }
 
@@ -192,12 +192,12 @@ function updateScene()
             //The text color changes.
             //also, change the panorama.
 
-            sphereElement.setAttribute('color',"brown");
-            sphereElement.setAttribute('radius',"0.75");
-            spinBall.setAttribute('visible', 'true');
-            spinBallAnim.emit("move!");
-            panoElement.setAttribute("src", "#aquarium");
-            boxElement.setAttribute('height','0.5');
+            // sphereElement.setAttribute('color',"brown");
+            // sphereElement.setAttribute('radius',"0.75");
+            // spinBall.setAttribute('visible', 'true');
+            // spinBallAnim.emit("move!");
+            // panoElement.setAttribute("src", "#aquarium");
+            // boxElement.setAttribute('height','0.5');
 
         }
 

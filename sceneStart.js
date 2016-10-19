@@ -63,7 +63,7 @@ function run () {
   panoElement=document.getElementById("pano");
 
   //2.Set the beginning text.
-  setInitialText();
+  //setInitialText();
 
   //3.Make the geolocation call.  This function will do the rest of the
   //variable checking for us.
