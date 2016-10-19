@@ -28,7 +28,7 @@ var currentMessage=0;
 var isJourneyDone=false;
 
 //Data we need to tell we're making progress.
-var maxDistance=0.05; //  in km
+var maxDistance=0.02; //  in km
 var locations= [
                   //Location 1: Clough Commons.
                   {
