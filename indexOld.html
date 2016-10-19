@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>Hello, World! • A-Frame</title>
     <meta name="description" content="Hello, World! • A-Frame">
-    <script src="dist/aframe.js"></script>
+    <!-- <script src="dist/aframe.js"></script> -->
+    <script src="https://aframe.io/releases/latest/aframe.js"></script>
   </head>
   <body>
     <a-scene id="theScene">
@@ -46,8 +47,8 @@
 
       <!-- <a-entity sound="https://sdykes3.github.io/forestVR/my-img/forestBest.wav; autoplay: true; loop: true"></a-entity> -->
 
-      <a-entity id="soundObject" geometry="primitive: plane" material="color: blue"
-          position="-10 0 0" sound="click: on; loop: true; src: #forestSound;"></a-entity>
+      <a-entity id="soundObject" geometry="primitive: plane" material="color=#EF2D5E"
+          position="0 1 -1" sound="click: on; loop: true; src: #forestSound;"></a-entity>
 
 
 
@@ -76,7 +77,7 @@
     <script>
 
         function changeMyColor() {
-            document.getElementById("soundObject").setAttribute("color", "#4CC3D9");
+            document.getElementById("soundObject").setAttribute("material", "color=#4CC3D9");
         }
 
         //adding a box as a child
