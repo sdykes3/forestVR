@@ -6,11 +6,13 @@
     <meta name="description" content="Hello, World! • A-Frame">
     <!-- <script src="dist/aframe.js"></script> -->
     <script src="https://aframe.io/releases/latest/aframe.js"></script>
+    <!--component used for text-->
+    <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
   </head>
   <body>
     <a-scene id="theScene">
         <a-assets>
-            <img id="enemy-sprite" crossorigin="" src="https://ucarecdn.com/f11bb3e6-ceb4-427c-bcaa-351cabac37d5/">
+            <!-- <img id="enemy-sprite" crossorigin="" src="https://ucarecdn.com/f11bb3e6-ceb4-427c-bcaa-351cabac37d5/"> -->
 
             <!-- <img id="kitten" crossorigin="" src="https://sdykes3.github.io/forestVR/my-img/kitten.png"> -->
 
@@ -28,7 +30,7 @@
             <!--<a-asset-item id="tree-obj" src="https://sdykes3.github.io/forestVR/my-img/tree1/2632.obj"></a-asset-item>-->
             <!--<a-asset-item id="tree-mtl" src="https://sdykes3.github.io/forestVR/my-img/tree1/2632.mtl"></a-asset-item>-->
 
-            <audio id="forestSound" src="https://sdykes3.github.io/forestVR/my-img/forestBest.wav"></audio>
+            <!-- <audio id="forestSound" src="https://sdykes3.github.io/forestVR/my-img/forestBest.wav"></audio> -->
         
         </a-assets>
 
@@ -47,8 +49,8 @@
 
       <!-- <a-entity sound="https://sdykes3.github.io/forestVR/my-img/forestBest.wav; autoplay: true; loop: true"></a-entity> -->
 
-      <a-entity id="soundObject" geometry="primitive: plane" material="color=#EF2D5E"
-          position="0 1 -1" sound="click: on; loop: true; src: #forestSound;"></a-entity>
+      <a-entity id="soundObject" geometry="primitive: plane" material="color: red" onclick="changeMyColor()"
+           position="0 1 -1"></a-entity>
 
 
 
@@ -74,11 +76,19 @@
     </a-scene>
   </body>
 
+    <script src="sceneControl.js"></script>
+    <script src="sceneStart.js"></script>
+
     <script>
 
         function changeMyColor() {
-            document.getElementById("soundObject").setAttribute("material", "color=#4CC3D9");
+            document.getElementById("soundObject").setAttribute("material", "color: blue");
+            console.log("TOUCHED");
+
+            var audio = new Audio('https://sdykes3.github.io/forestVR/my-img/forestBest.wav');
+            audio.play();
         }
+
 
         //adding a box as a child
         // var addMe = document.createElement('a-box');

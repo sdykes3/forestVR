@@ -3,8 +3,8 @@
 
 //Variables that access the scene objects.
 //These will be declared later in the program
-var sphereElement;
-var sphereAnimElement;
+
+//var oneObjects;
 
 var boxElement;
 var boxAnimElement;
