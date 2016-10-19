@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <title>VR Forest</title>
     <meta name="description" content="VR Forest">
-    <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/latest/aframe.js"></script>
     <!--component used for text-->
     <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
   </head>
   <body>
     <a-scene stats="true" id="theScene">
       <a-assets>
+          <img id="enemy-sprite" crossorigin="" src="https://ucarecdn.com/f11bb3e6-ceb4-427c-bcaa-351cabac37d5/">
         <!-- <audio id="forestSound" src="https://sdykes3.github.io/forestVR/my-img/forestBest.wav"></audio> -->
       </a-assets>
       <!-- <a-entity sound="autoplay: true; loop: true; src: #forestSound;"></a-entity> -->
@@ -20,7 +21,7 @@
       <a-entity id="soundObject" geometry="primitive: plane" material="color: red" onclick="playSound()" position="-3.01 1 -22"></a-entity>
 
 
-
+<a-image look-at-component="#cam" src="#enemy-sprite" transparent="true" position="3 1 1"></a-image>
 
       <!-- 2. Left and Right text, and debug text.-->
       <a-text id="locationText" text="The location text will appear here, on the left."
