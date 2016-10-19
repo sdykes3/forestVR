@@ -178,6 +178,7 @@ function updateScene()
             // sphereAnimElement.emit("move!");
             // boxAnimElement.emit("fade!");
             panoElement.setAttribute("src", "#creekPano");
+    console.log("AT CULC!!!!!!!!");
             // cylElement.setAttribute('color', 'pink');
 
         }
