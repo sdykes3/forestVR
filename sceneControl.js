@@ -177,7 +177,7 @@ function updateScene()
 
             // sphereAnimElement.emit("move!");
             // boxAnimElement.emit("fade!");
-            // panoElement.setAttribute("src", "#museum");
+            panoElement.setAttribute("src", "#creekPano");
             // cylElement.setAttribute('color', 'pink');
 
         }
@@ -196,6 +196,7 @@ function updateScene()
             // sphereElement.setAttribute('radius',"0.75");
             // spinBall.setAttribute('visible', 'true');
             // spinBallAnim.emit("move!");
+            panoElement.setAttribute("src", "#clearPano");
             // panoElement.setAttribute("src", "#aquarium");
             // boxElement.setAttribute('height','0.5');
 
