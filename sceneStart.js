@@ -21,13 +21,13 @@ function run () {
   console.log("Starting the program.");
 
   //1. Initialize all the variables in Scene One (forest) to access the scene objects.
-  one1=document.getElementById("one1");
-  one2=document.getElementById("one2");
-  one3=document.getElementById("one3");
-  one4=document.getElementById("one4");
-  one5=document.getElementById("one5");
-  one6=document.getElementById("one6");
-  one7=document.getElementById("one7");
+  // one1=document.getElementById("one1");
+  // one2=document.getElementById("one2");
+  // one3=document.getElementById("one3");
+  // one4=document.getElementById("one4");
+  // one5=document.getElementById("one5");
+  // one6=document.getElementById("one6");
+  // one7=document.getElementById("one7");
   // one8=document.getElementById("one8");
   // one9=document.getElementById("one9");
   // one10=document.getElementById("one10");
@@ -51,7 +51,9 @@ function run () {
   // oneLight=document.getElementById("oneLight");
   // oneCam=document.getElementById("oneCam");
 
-  oneObjects = [one1,one2,one3,one4,one5,one6,one7];
+  // oneObjects = [one1,one2,one3,one4,one5,one6,one7];
+
+  sceneOneStuff = document.getElementById("sceneOneStuff");
 
 
   leftText=document.getElementById("locationText");  //status, or current location text.

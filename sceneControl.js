@@ -3,16 +3,17 @@
 
 //Variables that access the scene objects.
 //These will be declared later in the program
+// var one1;
+// var one2;
+// var one3;
+// var one4;
+// var one5;
+// var one6;
+// var one7;
 
-//var oneObjects;
+// var oneObjects;
 
-var boxElement;
-var boxAnimElement;
-
-var cylElement;
-
-var spinBallElement;
-var spinBallAnimElement;
+var sceneOneStuff;
 
 var leftText;  //status text.
 var rightText; //progress text.
@@ -27,7 +28,7 @@ var currentMessage=0;
 var isJourneyDone=false;
 
 //Data we need to tell we're making progress.
-var maxDistance=0.055; //in km.
+var maxDistance=0.8; // 0.5mi in km
 var locations= [
                   //Location 1: Clough Commons.
                   {
@@ -55,7 +56,7 @@ var locations= [
 var locationMessages=
 [
   "You are somewhere in Georgia Tech.",
-  "You arrive in the Clough Commons.",
+  "You have found the Clough Commons.",
   "You have found the Skiles Building.",
   "You have found the Student Center."
 ];
