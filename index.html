@@ -7,7 +7,7 @@
     <script src="dist/aframe.js"></script>
   </head>
   <body>
-    <a-scene id="theScene">
+    <a-scene stats="true" id="theScene">
         <a-assets>
 
           <audio id="forestSound" src="https://sdykes3.github.io/forestVR/my-img/forestBest.wav"></audio>
@@ -48,6 +48,6 @@
       <a-light type=directional; intensity=1.2 color=#FFFFFF position="-0.04482719 0.02185679 0.9987557" ></a-light>
       <a-camera position="-3.01 0.83 -16.15"  cursor-color=#359763 wasd-controls-enabled=true fov=80 near=0.5 far=10000 cursor-maxdistance=1000 cursor-offset=1 cursor-opacity=1 cursor-scale1 look-controls-enabled=true></a-camera>
       <a-entity loader="src: url(models/default_MeshPart2.obj); format: obj" scale="0.3 0.3000001 0.3000001" rotation="270 0 0" position="-7.74 -3.48 -123.44" material="shader: standard; repeat: 1; color: #CCCCCC; metalness: 0; roughness: 0.5; transparent: false; opacity: 1; side: double; "></a-entity>
-    </a-scene>
+    </a-scene stats="true">
   </body>
 </html>
