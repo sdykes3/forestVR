@@ -38,19 +38,21 @@
 <!--       <a-entity id="river" geometry="primitive: plane" material="color: blue"
           position="0 1 1" sound="src: https://sdykes3.github.io/forestVR/my-img/forestBest.wav; on: click"></a-entity>
  -->
-      <a-entity sound="click: on; loop: true; src: #forestSound;"></a-entity>
-<!-- 
-      <a-sphere id='originalSphere' sound="src: https://sdykes3.github.io/forestVR/my-img/forestBest.wav; on: click" position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere> -->
+      <!-- <a-entity sound="click: on; loop: true; src: #forestSound;"></a-entity> -->
+
+      <!-- <a-sphere id='originalSphere' sound="src: https://sdykes3.github.io/forestVR/my-img/forestBest.wav; on: click" position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere> -->
 
 <!--       <a-sphere id='originalSphere' sound="src: https://sdykes3.github.io/forestVR/my-img/forestBest.wav; on: click" onclick="changeMyColor()" position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere> -->
 
       <!-- <a-entity sound="https://sdykes3.github.io/forestVR/my-img/forestBest.wav; autoplay: true; loop: true"></a-entity> -->
 
+      <a-entity id="soundObject" geometry="primitive: plane" material="color: blue"
+          position="-10 0 0" sound="click: on; loop: true; src: #forestSound;"></a-entity>
+
 
 
 
   
-      <a-image sound="click: on; loop: true; src: #forestSound;" look-at-component="#cam" src="#enemy-sprite" transparent="true" position="-3 1 1"></a-image>
       <!-- <a-image look-at-component="#cam" src="#kitten" transparent="true" position="3 1 1"></a-image> -->
 
 
@@ -71,47 +73,47 @@
     </a-scene>
   </body>
 
-    // <script>
+    <script>
 
-    //     function changeMyColor() {
-    //         document.getElementById("originalSphere").setAttribute("color", "#4CC3D9");
-    //     }
+        function changeMyColor() {
+            document.getElementById("soundObject").setAttribute("color", "#4CC3D9");
+        }
 
-    //     //adding a box as a child
-    //     var addMe = document.createElement('a-box');
-    //     addMe.setAttribute("position", "-1 2.5 1");
-    //     addMe.setAttribute("rotation", "0 45 0");
-    //     addMe.setAttribute("width", "1");
-    //     addMe.setAttribute("height", "1");
-    //     addMe.setAttribute("depth", "1");
-    //     addMe.setAttribute("color", "#4CC3D9");
-    //     //adding a box as a child, but to something different
-    //     var addMeSimilarly = document.createElement('a-box');
-    //     addMeSimilarly.setAttribute("position", "-1 2.5 1");
-    //     addMeSimilarly.setAttribute("rotation", "0 45 0");
-    //     addMeSimilarly.setAttribute("width", "1");
-    //     addMeSimilarly.setAttribute("height", "1");
-    //     addMeSimilarly.setAttribute("depth", "1");
-    //     addMeSimilarly.setAttribute("color", "#4CC3D9");
+        //adding a box as a child
+        // var addMe = document.createElement('a-box');
+        // addMe.setAttribute("position", "-1 2.5 1");
+        // addMe.setAttribute("rotation", "0 45 0");
+        // addMe.setAttribute("width", "1");
+        // addMe.setAttribute("height", "1");
+        // addMe.setAttribute("depth", "1");
+        // addMe.setAttribute("color", "#4CC3D9");
+        // //adding a box as a child, but to something different
+        // var addMeSimilarly = document.createElement('a-box');
+        // addMeSimilarly.setAttribute("position", "-1 2.5 1");
+        // addMeSimilarly.setAttribute("rotation", "0 45 0");
+        // addMeSimilarly.setAttribute("width", "1");
+        // addMeSimilarly.setAttribute("height", "1");
+        // addMeSimilarly.setAttribute("depth", "1");
+        // addMeSimilarly.setAttribute("color", "#4CC3D9");
 
-    //     var scene = document.getElementById("theScene");
-    //     var element = document.getElementById("originalSphere");
+        // var scene = document.getElementById("theScene");
+        // var element = document.getElementById("originalSphere");
 
-    //     scene.appendChild(addMe); //added with origin in middle of scene
-    //     element.appendChild(addMeSimilarly); //added with origin in middle of sphere
-
-
-    //     //random position sphere
-    //     // var rando = document.createElement("a-sphere");
-    //     // var xPos = (Math.random() * 10) - 5; //Math.random() is between 0 and 1; result will be between -5 and 5
-    //     // rando.setAttribute("position", xPos.toString() + " 2.5 1");
-    //     // rando.setAttribute("rotation", "0 45 0");
-    //     // rando.setAttribute("radius", "1");
-    //     // rando.setAttribute("color", "#009900");
-    //     // scene.appendChild(rando);
+        // scene.appendChild(addMe); //added with origin in middle of scene
+        // element.appendChild(addMeSimilarly); //added with origin in middle of sphere
 
 
-    // </script>
+        //random position sphere
+        // var rando = document.createElement("a-sphere");
+        // var xPos = (Math.random() * 10) - 5; //Math.random() is between 0 and 1; result will be between -5 and 5
+        // rando.setAttribute("position", xPos.toString() + " 2.5 1");
+        // rando.setAttribute("rotation", "0 45 0");
+        // rando.setAttribute("radius", "1");
+        // rando.setAttribute("color", "#009900");
+        // scene.appendChild(rando);
+
+
+    </script>
 
     
 </html>
