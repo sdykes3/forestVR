@@ -28,7 +28,7 @@ var currentMessage=0;
 var isJourneyDone=false;
 
 //Data we need to tell we're making progress.
-var maxDistance=0.8; // 0.5mi in km
+var maxDistance=0.2; //  in km
 var locations= [
                   //Location 1: Clough Commons.
                   {
@@ -99,7 +99,7 @@ function setInitialText()
     console.log(progressMessages[currentMessage]);
     console.log(geolocationOptions);
     console.log(checkReceivedLocation);
-    console.log(positionData);
+    console.log("posdata = " + positionData);
 
 }
 
