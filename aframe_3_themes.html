@@ -19,18 +19,7 @@
         <img id="piedmont" src="panoramas/pied.jpg">
         <img id="museum" src="panoramas/high.jpg">
         <img id="woc" src="panoramas/woc.jpg">
-        <img id="forestPano" src="https://sdykes3.github.io/forestVR/my-img/trees.jpg">
-        <img id="clearPano" src="https://sdykes3.github.io/forestVR/my-img/clearing.jpg">
-        <img id="creekPano" src="https://sdykes3.github.io/forestVR/my-img/creek.jpg">
-        <audio id="forestSound" src="https://sdykes3.github.io/forestVR/my-img/forestBest.wav"></audio>
       </a-assets>
-
-
-
-      <!-- Sound, either click or auto -->
-      <!-- <a-sphere id="soundObject" onclick="playSound()" position="-5 3 -3" radius="0.5" color="#EF2D5E" opacity="1"></a-sphere> -->
-      <a-entity id="soundObject" sound="src: #forestSound; autoplay: true" position="-5 3 -3"></a-entity>
-
 
       <!-- 1. The Hello World primitives. -->
       <!--I've added id's, animations, and some extra properties -->
@@ -79,17 +68,10 @@
             </a-sphere>
       </a-entity>
 
+
       <a-plane id="plane1" rotation="-90 0 0" width="4"
                height="4" color="#7BC8A4">
       </a-plane>
-
-
-      <a-entity id="treeStuff">
-
-      </a-entity>
-
-
-
 
       <!-- 2. Left and Right text, and debug text.-->
       <a-text id="locationText" text="The location text will appear here, on the left."
@@ -104,20 +86,13 @@
                color="green" position="-2 3.5 0" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center">
       </a-text>
 
-
-
-
-
       <!--Where the panoramas would appear -->
       <a-sky id="pano" src="#woc" color="white"></a-sky>
-
-
-
 
       <!--The cursor-->
       <a-entity position="0 0 3.8">
              <a-camera>
-                 <a-cursor color="#359763"
+                 <a-cursor color="#2E3A87"
                    fuse="true" >
                    <a-animation begin="fusing" easing="ease-in" attribute="material.color"
                                fill="forwards" from="#2E3A87" to="white" dur="1500"></a-animation>
@@ -137,16 +112,5 @@
     <script src="sceneControllerVariables.js"></script>
     <script src="sceneControllerFunctions.js"></script>
     <script src="sceneControllerStart.js"></script>
-
-    <script>
-        function playSound() {
-            document.getElementById("soundObject").setAttribute("color", "blue");
-            console.log("TOUCHED");
-
-            var audio = new Audio('https://sdykes3.github.io/forestVR/my-img/forestBest.wav');
-            audio.play();
-        }
-    </script>
-
   </body>
 </html>
