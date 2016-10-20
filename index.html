@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Navigator.Geolocation and A-Frame</title>
-    <meta name="description" content="Navigator.Geolocation and A-Frame">
+    <meta name="description" content="VR Forest New">
     <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
     <!--component used for text-->
     <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
@@ -24,7 +24,7 @@
         <img id="creekPano" src="https://sdykes3.github.io/forestVR/my-img/creek.jpg">
         <audio id="forestSound" src="https://sdykes3.github.io/forestVR/my-img/forestBest.wav"></audio>
 
-        <a-asset-item id="tree1" src="https://sdykes3.github.io/forestVR/my-img/models/tree1.dae"></a-asset-item>
+        <a-asset-item id="tree1" src="https://sdykes3.github.io/forestVR/my-img/models/Tree Type3 04.dae"></a-asset-item>
       </a-assets>
 
 
@@ -32,6 +32,14 @@
       <!-- Sound, either click or auto -->
       <!-- <a-sphere id="soundObject" onclick="playSound()" position="-5 3 -3" radius="0.5" color="#EF2D5E" opacity="1"></a-sphere> -->
       <a-entity id="soundObject" sound="src: #forestSound; autoplay: true" position="-5 3 -3"></a-entity>
+
+
+
+      <!-- 1. Tree objects -->
+      <a-entity id="treeStuff">
+        <a-entity collada-model="#tree1" position="0 0 0"></a-entity>
+      </a-entity>
+
 
 
       <!-- 1. The Hello World primitives. -->
@@ -83,11 +91,6 @@
         </a-plane>
       </a-entity> <!-- End primitiveStuff -->
 
-
-      <!-- 1. Tree objects -->
-      <a-entity id="treeStuff">
-        <a-entity collada-model="#tree1" position="0 0 0"></a-entity>
-      </a-entity>
 
 
 
