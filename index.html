@@ -23,6 +23,8 @@
         <img id="clearPano" src="https://sdykes3.github.io/forestVR/my-img/clearing.jpg">
         <img id="creekPano" src="https://sdykes3.github.io/forestVR/my-img/creek.jpg">
         <audio id="forestSound" src="https://sdykes3.github.io/forestVR/my-img/forestBest.wav"></audio>
+
+        <a-asset-item id="tree1" src="https://sdykes3.github.io/forestVR/my-img/models/tree1.dae"></a-asset-item>
       </a-assets>
 
 
@@ -35,57 +37,56 @@
       <!-- 1. The Hello World primitives. -->
       <!--I've added id's, animations, and some extra properties -->
 
-      <a-sphere id="sphere1" position="0 1.25 -1" radius="1.25" color="#EF2D5E" opacity="1">
-            <a-animation id="sphere1Anim" attribute="position"
-                         begin="move!"
-                         end="stop!"
-                         from="0 1.25 -1"
-                         to="0 5.25 -1"
-                         dur="4000"
-                         repeat="indefinite"
-                         direction="alternate">
-           </a-animation>
-      </a-sphere>
-
-      <a-box id="box1" position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1"  color="#4CC3D9">
-        <a-animation id="box1Anim" attribute="opacity"
-                               begin="fade!"
-                               end="stop!"
-                               delay="0"
-                               dur="900"
-                               ease="linear"
-                               from="0"
-                               to="1"
-                               repeat="indefinite"
-                               direction="alternate">
-        </a-animation>
-      </a-box>
-
-      <a-cylinder id="cyl1" position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D" opacity="1">
-      </a-cylinder>
-
-      <!-- A spinning ball , spinning around an empty entity-->
-      <a-entity position="1 0.75 1" rotation="0 10 0">
-            <a-animation id="spinBallAnim" attribute="rotation"
-                                 begin="move!"
+      <a-entity id="primitiveStuff">
+        <a-sphere id="sphere1" position="0 1.25 -1" radius="1.25" color="#EF2D5E" opacity="1">
+              <a-animation id="sphere1Anim" attribute="position"
+                           begin="move!"
+                           end="stop!"
+                           from="0 1.25 -1"
+                           to="0 5.25 -1"
+                           dur="4000"
+                           repeat="indefinite"
+                           direction="alternate">
+             </a-animation>
+        </a-sphere>
+        <a-box id="box1" position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1"  color="#4CC3D9">
+          <a-animation id="box1Anim" attribute="opacity"
+                                 begin="fade!"
                                  end="stop!"
                                  delay="0"
-                                 dur="1000"
-                                 to="0 10 360"
+                                 dur="900"
+                                 ease="linear"
+                                 from="0"
+                                 to="1"
                                  repeat="indefinite"
-                                 easing="linear">
-            </a-animation>
-            <a-sphere id="spinBall" visible="false" position="0 3 0" radius="0.3" color="green">
-            </a-sphere>
-      </a-entity>
+                                 direction="alternate">
+          </a-animation>
+        </a-box>
+        <a-cylinder id="cyl1" position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D" opacity="1">
+        </a-cylinder>
+        <!-- A spinning ball , spinning around an empty entity-->
+        <a-entity position="1 0.75 1" rotation="0 10 0">
+              <a-animation id="spinBallAnim" attribute="rotation"
+                                   begin="move!"
+                                   end="stop!"
+                                   delay="0"
+                                   dur="1000"
+                                   to="0 10 360"
+                                   repeat="indefinite"
+                                   easing="linear">
+              </a-animation>
+              <a-sphere id="spinBall" visible="false" position="0 3 0" radius="0.3" color="green">
+              </a-sphere>
+        </a-entity>
+        <a-plane id="plane1" rotation="-90 0 0" width="4"
+                 height="4" color="#7BC8A4">
+        </a-plane>
+      </a-entity> <!-- End primitiveStuff -->
 
-      <a-plane id="plane1" rotation="-90 0 0" width="4"
-               height="4" color="#7BC8A4">
-      </a-plane>
 
-
+      <!-- 1. Tree objects -->
       <a-entity id="treeStuff">
-
+        <a-entity collada-model="#tree1" position="0 0 0"></a-entity>
       </a-entity>
 
 
@@ -109,7 +110,7 @@
 
 
       <!--Where the panoramas would appear -->
-      <a-sky id="pano" src="#woc" color="white"></a-sky>
+      <a-sky id="pano" src="#forestPano" color="white"></a-sky>
 
 
 
