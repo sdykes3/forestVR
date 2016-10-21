@@ -136,8 +136,9 @@
             document.getElementById("creekStuff").setAttribute("visible", "false");
             document.getElementById("primitiveStuff").setAttribute("visible", "false");
 
-            audio = new Audio('https://sdykes3.github.io/forestVR/my-img/forestBest.wav');
-            audio.play();
+            // audio = new Audio('https://sdykes3.github.io/forestVR/my-img/forestBest.wav');
+            audioForest.play();
+            audioCreek.pause();
 
         }
 
@@ -153,8 +154,9 @@
             document.getElementById("treeStuff").setAttribute("visible", "false");
             document.getElementById("primitiveStuff").setAttribute("visible", "false");
 
-            audio = new Audio('https://sdykes3.github.io/forestVR/my-img/streamBest.wav');
-            audio.play();
+            // audio = new Audio('https://sdykes3.github.io/forestVR/my-img/streamBest.wav');
+            audioForest.pause();
+            audioCreek.play();
 
         }
 
@@ -170,7 +172,8 @@
             document.getElementById("treeStuff").setAttribute("visible", "false");
             document.getElementById("creekStuff").setAttribute("visible", "false");
 
-            audio.stop();
+            audioForest.pause();
+            audioCreek.pause();
 
         }
 

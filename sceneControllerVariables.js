@@ -19,7 +19,8 @@ var rightText; //progress text.
 var debugText;
 
 var panoElement;
-var audio;
+var audioForest = new Audio('https://sdykes3.github.io/forestVR/my-img/forestBest.wav');
+var audioCreek = new Audio('https://sdykes3.github.io/forestVR/my-img/streamBest.wav');
 
 
 var treeStuff;
