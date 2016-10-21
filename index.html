@@ -26,6 +26,7 @@
         <audio id="streamSound" src="https://sdykes3.github.io/forestVR/my-img/streamBest.wav"></audio>
 
         <a-asset-item id="tree1" src="https://sdykes3.github.io/forestVR/my-img/models/Tree Type3 04.dae"></a-asset-item>
+
       </a-assets>
 
 
@@ -54,10 +55,19 @@
         <a-entity collada-model="#tree1" position="6 -1 -4" rotation="0 190 0"></a-entity>
         <a-entity collada-model="#tree1" position="13 -1 6" scale="3 3 3" rotation="0 90 0"></a-entity>
 
-        <a-text id="treeText1" text="This is a certain species of tree." visible="false"
-               color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center">
-      </a-text>
+        <a-text id="treeText1" text="The original forests of the Piedmont consisted mainly of oak and hickory trees." 
+          visible="false" color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="treeText2" text="Oak and poplar trees are among the largest found here, growing up to 156ft tall and dominating the canpoy." 
+          visible="false" color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="treeText3" text="Yellow poplars (Liriodendron tulipifera) make up roughly 20 percent of the forest trees." 
+          visible="false" color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="treeText4" text="Pine trees, such as the loblolly pine (Pinus taeda), are relatively uncommon here. This is in sharp contrast to modern vegetation patterns." 
+          visible="false" color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="treeText4" text="The Piedmont is known for its old, highly weathered, and fairly nutrient-poor soils." 
+          visible="false" color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
       </a-entity>
+
+
 
 
       <!-- 1. Creek objects -->
@@ -79,6 +89,14 @@
         <a-sphere onclick="forestScene()" position="-5 3 -3" radius="0.5" color="green" opacity="1"></a-sphere>
         <a-sphere onclick="defaultScene()" position="0 3 -3" radius="0.5" color="#EF2D5E" opacity="1"></a-sphere>
         <a-sphere onclick="creekScene()" position="5 3 -3" radius="0.5" color="blue" opacity="1"></a-sphere>
+
+        <a-text id="defText1" text="The Piedmont is a plateau region located in the eastern United States. It spans several states." 
+          visible="true" color="green" position="4 1.5 2" rotation= "0 270 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="defText2" text="Little original vegetation in this area exists. In the Atlanta area, only Fernbank Museum of Natural History has original forest growth, spanning 65-acres."
+          visible="true" color="green" position="-3 1.2 8" rotation= "0 90 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="defText3" text="Modern development and invasive species has transformed the landscape, making it difficult to imagine the way the region used to be. This VR experience aims to educate and immerse the user in the forests of the past." 
+          visible="true" color="green" position="3 1 8" rotation= "0 180 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+ 
       </a-entity>
 
 
@@ -129,10 +147,19 @@
     <script>
 
         function showTextForest1() {
+          if(document.getElementById("treeText1").getAttribute("visible") === false) {
             document.getElementById("treeText1").setAttribute("visible", "true");
+          } else if(document.getElementById("treeText1").getAttribute("visible") === true) {
+            document.getElementById("treeText1").setAttribute("visible", "false");
+          }
         }
 
         function forestScene() {
+
+            //turn off default scene info
+            document.getElementById("defText1").setAttribute("visible", "false");
+            document.getElementById("defText2").setAttribute("visible", "false");
+            document.getElementById("defText3").setAttribute("visible", "false");
 
             leftText.setAttribute('text', "");
             rightText.setAttribute('text', "LOCATION 1");
@@ -152,6 +179,11 @@
 
       function creekScene() {
 
+            //turn off default scene info
+            document.getElementById("defText1").setAttribute("visible", "false");
+            document.getElementById("defText2").setAttribute("visible", "false");
+            document.getElementById("defText3").setAttribute("visible", "false");
+
             // leftText.setAttribute('text', "");
             rightText.setAttribute('text', "LOCATION 2");
             // debugText.setAttribute('text', "");
@@ -169,6 +201,11 @@
         }
 
         function defaultScene() {
+
+            //turn on default scene info
+            document.getElementById("defText1").setAttribute("visible", "true");
+            document.getElementById("defText2").setAttribute("visible", "true");
+            document.getElementById("defText3").setAttribute("visible", "true");
 
             // leftText.setAttribute('text', "");
             rightText.setAttribute('text', "DEFAULT SCENE VIEW");
