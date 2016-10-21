@@ -141,18 +141,36 @@
              </a-camera>
       </a-entity>
 
-      <!--For the cursor: if you want the cursor to be bigger-->
-      <!-- geometry="primitive: ring; radiusOuter: 0.10;
-               radiusInner: 0.05;" -->
+
     </a-scene>
 
     <!--including scripts -->
     <script src="circleDistanceScript.js"></script>
+    <script src="sceneControllerStart.js"></script>
     <script src="sceneControllerVariables.js"></script>
     <script src="sceneControllerFunctions.js"></script>
-    <script src="sceneControllerStart.js"></script>
 
     <script>
+
+
+        // function geo_success(position) {
+        //   //alert(position.coords.latitude, position.coords.longitude);
+        // }
+
+        // function geo_error() {
+        //   alert("Sorry, no position available.");
+        // }
+
+        // var geo_options = {
+        //   enableHighAccuracy: true, 
+        //   maximumAge        : 30000, 
+        //   timeout           : 27000
+        // };
+
+        // var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_options);
+
+
+
 
         function showTextForest1() {
           if(document.getElementById("treeText1").getAttribute("visible") === false) {
