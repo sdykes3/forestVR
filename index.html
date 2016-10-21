@@ -72,20 +72,20 @@
       <a-entity id="creekStuff" visible="false">
         <a-sky id="pano" src="#creekPano" color="white"></a-sky>
 
-        <a-entity collada-model="#tree1" position="7 0 -7"></a-entity>
-        <a-entity collada-model="#tree1" position="7 -1 14"></a-entity>
-        <a-entity collada-model="#tree1" position="13 -1 7" scale="3 3 3" rotation="-15 90 0"></a-entity>
-        <a-entity collada-model="#tree1" position="-21 -1 0" scale="3 3 3" rotation="0 90 0"></a-entity>
+        <a-entity collada-model="#tree1" onclick="showTextCreek1()" position="7 0 -7"></a-entity>
+        <a-entity collada-model="#tree1" onclick="showTextCreek3()" position="7 -1 14"></a-entity>
+        <a-entity collada-model="#tree1" onclick="showTextCreek4()" position="13 -1 7" scale="3 3 3" rotation="-15 90 0"></a-entity>
+        <a-entity collada-model="#tree1" onclick="showTextCreek2()" position="-21 -1 0" scale="3 3 3" rotation="0 90 0"></a-entity>
 
 
         <a-text id="creekText1" text="The Piedmont is known for its old, highly weathered, and fairly nutrient-poor soils." 
-          visible="false" color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
-        <a-text id="creekText2" text="The Piedmont is known for its old, highly weathered, and fairly nutrient-poor soils." 
-          visible="false" color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
-        <a-text id="creekText3" text="The Piedmont is known for its old, highly weathered, and fairly nutrient-poor soils." 
-          visible="false" color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
-        <a-text id="creekText4" text="The Piedmont is known for its old, highly weathered, and fairly nutrient-poor soils." 
-          visible="false" color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+          visible="false" color="white" position="1 -1 -3" rotation= "0 310 0" scale="2 2 2" width="600" align="center"></a-text>
+        <a-text id="creekText2" text="Many modern invasive species such as bamboo, English ivy, honeysuckle (Lonicera japonica), and privet were not present in the original forests."
+          visible="false" color="white" position="-5 -1 8" rotation= "0 90 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="creekText3" text="Some ancient streams no longer exist, due either to changing geography or intentional re-routing. Clear Creek is one such example in Atlanta." 
+          visible="false" color="white" position="2 1 8" rotation= "0 180 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="creekText4" text="Native wildlife includes raccoons, opossums, gray squirrels, chipmunks, American crows, pileated woodpeckers, box turtles, and several snake species, including the venomous copperhead."
+          visible="false" color="white" position="4 1 0" rotation= "0 280 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
       </a-entity>
 
 
@@ -102,7 +102,7 @@
           visible="true" color="green" position="4 1.5 3" rotation= "0 270 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
         <a-text id="defText2" text="Little original vegetation in this area exists. In the Atlanta area, only Fernbank Museum of Natural History has original forest growth, spanning 65-acres."
           visible="true" color="green" position="-3 1.2 8" rotation= "0 90 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
-        <a-text id="defText3" text="Modern development and invasive species has transformed the landscape, making it difficult to imagine the way the region used to be. This VR experience aims to educate and immerse the user in the forests of the past." 
+        <a-text id="defText3" text="Modern development and invasive species has transformed the landscape, making it difficult to imagine the way the region used to be. This VR experience aims to educate and immerse the user in the forests of the past. Tap trees for information about the area." 
           visible="true" color="green" position="3 1 8" rotation= "0 180 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
  
       </a-entity>
@@ -221,9 +221,9 @@
             document.getElementById("defText2").setAttribute("visible", "false");
             document.getElementById("defText3").setAttribute("visible", "false");
 
-            leftText.setAttribute('text', "");
+            //leftText.setAttribute('text', "");
             rightText.setAttribute('text', "LOCATION 1");
-            debugText.setAttribute('text', "");
+            //debugText.setAttribute('text', "");
 
             //make treeStuff entity visible
             panoElement.setAttribute("src", "#forestPano");
