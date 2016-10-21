@@ -1,6 +1,7 @@
 //This file includes the functions that use the variables declared in
 //the variables file.
 
+
 function setInitialText()
 {
 
@@ -40,12 +41,10 @@ function setInitialText()
 
 function updateScene()
 {
-
     targetLocation++;
     currentMessage++;
 
-    if(targetLocation>=locations.length)
-    {
+    if(targetLocation>=locations.length) {
       //We are finished.  We can stop fetching locations.
       navigator.geolocation.clearWatch(geolocationCall);
       isJourneyDone=true;
@@ -63,7 +62,7 @@ function updateScene()
       panoElement.setAttribute('color','pink');
     }
 
-    else{
+    else {
 
         //You have not reached the last area yet.
 
@@ -73,8 +72,7 @@ function updateScene()
 
 
         //Making the animation changes.
-        if(targetLocation === 1)
-        {
+        if(targetLocation === 1) {
           //now moving to target location 1.
 
           //Scenery changes in location 2 (1, if starting from 0):
@@ -88,17 +86,23 @@ function updateScene()
             // panoElement.setAttribute("src", "#forestPano");
             // cylElement.setAttribute('color', 'pink');
 
+
+            leftText.setAttribute('text', "");
             rightText.setAttribute('text', "LOCATION 1");
+            debugText.setAttribute('text', "");
 
             //make treeStuff entity visible
             panoElement.setAttribute("src", "#forestPano");
             document.getElementById("treeStuff").setAttribute("visible", "true");
+            document.getElementById("creekStuff").setAttribute("visible", "false");
+            document.getElementById("primitiveStuff").setAttribute("visible", "false");
 
+            audio = new Audio('https://sdykes3.github.io/forestVR/my-img/forestBest.wav');
+            audio.play();
 
         }
 
-        if(targetLocation === 2)
-        {
+        if(targetLocation === 2) {
           //now moving to target location 2.
 
           //Scenery changes in location 3 (2, if starting from 0):
@@ -113,11 +117,19 @@ function updateScene()
             // spinBallAnim.emit("move!");
             // boxElement.setAttribute('height','0.5');
 
+
+            // leftText.setAttribute('text', "");
             rightText.setAttribute('text', "LOCATION 2");
+            // debugText.setAttribute('text', "");
 
             //make treeStuff entity visible
             panoElement.setAttribute("src", "#creekPano");
             document.getElementById("creekStuff").setAttribute("visible", "true");
+            document.getElementById("treeStuff").setAttribute("visible", "false");
+            document.getElementById("primitiveStuff").setAttribute("visible", "false");
+
+            audio = new Audio('https://sdykes3.github.io/forestVR/my-img/streamBest.wav');
+            audio.play();
 
         }
 

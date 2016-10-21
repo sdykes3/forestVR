@@ -19,10 +19,12 @@ var rightText; //progress text.
 var debugText;
 
 var panoElement;
-
+var audio;
 
 
 var treeStuff;
+var creekStuff;
+var primitiveStuff;
 
 
 //Progress variables.
