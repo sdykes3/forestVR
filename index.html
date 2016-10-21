@@ -49,13 +49,13 @@
       <a-entity id="forestStuff" visible="false">
         <a-sky id="pano" src="#forestPano" color="white"></a-sky>
         
-        <a-entity collada-model="#tree1" position="-2 -1 0"></a-entity>
+        <a-entity collada-model="#tree1" onclick="showTextForest1()" position="-2 -1 0"></a-entity>
         <a-entity collada-model="#tree1" position="-4 -1 8" scale=".5 .5 .5" rotation="0 110 0"></a-entity>
         <a-entity collada-model="#tree1" position="6 -1 -4" rotation="0 190 0"></a-entity>
         <a-entity collada-model="#tree1" position="13 -1 6" scale="3 3 3" rotation="0 90 0"></a-entity>
 
-        <a-text id="forest" text="The current distance will be displayed here."
-               color="blue" position="-2 3.5 0" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center">
+        <a-text id="treeText1" text="This is a certain species of tree." visible="false"
+               color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center">
       </a-text>
       </a-entity>
 
@@ -127,6 +127,10 @@
     <script src="sceneControllerStart.js"></script>
 
     <script>
+
+        function showTextForest1() {
+            document.getElementById("treeText1").setAttribute("visible", "true");
+        }
 
         function forestScene() {
 
