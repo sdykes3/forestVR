@@ -83,14 +83,17 @@ function updateScene()
             //The texts are updated.(already did this above.)
             //also, change the panorama.
 
-            sphereAnimElement.emit("move!");
-            boxAnimElement.emit("fade!");
-            panoElement.setAttribute("src", "#forestPano");
-            cylElement.setAttribute('color', 'pink');
+            // sphereAnimElement.emit("move!");
+            // boxAnimElement.emit("fade!");
+            // panoElement.setAttribute("src", "#forestPano");
+            // cylElement.setAttribute('color', 'pink');
 
             rightText.setAttribute('text', "LOCATION 1");
 
             //make treeStuff entity visible
+            panoElement.setAttribute("src", "#forestPano");
+            document.getElementById("treeStuff").setAttribute("visible", "true");
+
 
         }
 
@@ -104,14 +107,17 @@ function updateScene()
             //The text color changes.
             //also, change the panorama.
 
-            sphereElement.setAttribute('color',"brown");
-            sphereElement.setAttribute('radius',"0.75");
-            spinBall.setAttribute('visible', 'true');
-            spinBallAnim.emit("move!");
-            panoElement.setAttribute("src", "#creekPano");
-            boxElement.setAttribute('height','0.5');
+            // sphereElement.setAttribute('color',"brown");
+            // sphereElement.setAttribute('radius',"0.75");
+            // spinBall.setAttribute('visible', 'true');
+            // spinBallAnim.emit("move!");
+            // boxElement.setAttribute('height','0.5');
 
             rightText.setAttribute('text', "LOCATION 2");
+
+            //make treeStuff entity visible
+            panoElement.setAttribute("src", "#creekPano");
+            document.getElementById("creekStuff").setAttribute("visible", "true");
 
         }
 

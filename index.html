@@ -36,8 +36,9 @@
 
 
 
-
-      <a-sphere id="soundObject" onclick="disappear()" position="-5 3 -3" radius="0.5" color="#EF2D5E" opacity="1"></a-sphere>
+      <!-- Test click disappearing -->
+      <a-sphere onclick="disappear()" position="-5 3 -3" radius="0.5" color="#EF2D5E" opacity="1"></a-sphere>
+      
       
 
       <!-- 1. Tree objects -->
@@ -47,6 +48,13 @@
         <a-entity collada-model="#tree1" position="13 -1 7" scale="3 3 3" rotation="0 90 0"></a-entity>
       </a-entity>
 
+      <!-- 1. Creek objects -->
+      <a-entity id="creekStuff" visible="true">
+        <a-entity collada-model="#tree1" position="-6 -1 -4"></a-entity>
+        <a-entity collada-model="#tree1" position="6 -1 14"></a-entity>
+        <a-entity collada-model="#tree1" position="13 -1 7" scale="3 3 3" rotation="0 90 0"></a-entity>
+        <a-entity collada-model="#tree1" position="-15 -1 7" scale="3 3 3" rotation="0 90 0"></a-entity>
+      </a-entity>
 
 
       <!-- 1. The Hello World primitives. -->
