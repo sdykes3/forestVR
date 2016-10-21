@@ -93,7 +93,7 @@ function updateScene()
 
             //make treeStuff entity visible
             panoElement.setAttribute("src", "#forestPano");
-            document.getElementById("treeStuff").setAttribute("visible", "true");
+            document.getElementById("forestStuff").setAttribute("visible", "true");
             document.getElementById("creekStuff").setAttribute("visible", "false");
             document.getElementById("primitiveStuff").setAttribute("visible", "false");
 
@@ -125,7 +125,7 @@ function updateScene()
             //make treeStuff entity visible
             panoElement.setAttribute("src", "#creekPano");
             document.getElementById("creekStuff").setAttribute("visible", "true");
-            document.getElementById("treeStuff").setAttribute("visible", "false");
+            document.getElementById("forestStuff").setAttribute("visible", "false");
             document.getElementById("primitiveStuff").setAttribute("visible", "false");
 
             audio = new Audio('https://sdykes3.github.io/forestVR/my-img/streamBest.wav');

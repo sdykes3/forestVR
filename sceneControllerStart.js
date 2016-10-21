@@ -38,7 +38,9 @@ function run () {
 
   panoElement=document.getElementById("pano");
 
-  treeStuff=document.getElementById("treeStuff");
+  forestStuff=document.getElementById("forestStuff");
+  creekStuff=document.getElementById("creekStuff");
+  primitiveStuff=document.getElementById("primitiveStuff");
 
   //2.Set the beginning text.
   setInitialText();

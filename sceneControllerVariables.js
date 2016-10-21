@@ -22,8 +22,32 @@ var panoElement;
 var audioForest = new Audio('https://sdykes3.github.io/forestVR/my-img/forestBest.wav');
 var audioCreek = new Audio('https://sdykes3.github.io/forestVR/my-img/streamBest.wav');
 
+//looping for audio, in different browsers
+if (typeof audioCreek.loop == 'boolean')
+{
+    audioCreek.loop = true;
+}
+else
+{
+    audioCreek.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+}
+if (typeof audioForest.loop == 'boolean')
+{
+    audioForest.loop = true;
+}
+else
+{
+    audioForest.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+}
 
-var treeStuff;
+
+var forestStuff;
 var creekStuff;
 var primitiveStuff;
 

@@ -46,13 +46,17 @@
 
 
       <!-- 1. Tree objects -->
-      <a-entity id="treeStuff" visible="false">
+      <a-entity id="forestStuff" visible="false">
         <a-sky id="pano" src="#forestPano" color="white"></a-sky>
         
         <a-entity collada-model="#tree1" position="-2 -1 0"></a-entity>
         <a-entity collada-model="#tree1" position="-4 -1 8" scale=".5 .5 .5" rotation="0 110 0"></a-entity>
         <a-entity collada-model="#tree1" position="6 -1 -4" rotation="0 190 0"></a-entity>
         <a-entity collada-model="#tree1" position="13 -1 6" scale="3 3 3" rotation="0 90 0"></a-entity>
+
+        <a-text id="forest" text="The current distance will be displayed here."
+               color="blue" position="-2 3.5 0" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center">
+      </a-text>
       </a-entity>
 
 
@@ -91,7 +95,7 @@
       </a-text>
 
       <a-text id="progressText" text="The option text will appear here, on the right."
-               color="yellow" position="2.5 0 0" rotation= "0 -60 0" scale="1.5 1.5 1.5" width="270" align="right">
+               color="yellow" position="3.5 0 0" rotation= "0 -60 0" scale="1.5 1.5 1.5" width="270" align="right">
       </a-text>
 
 
@@ -132,7 +136,7 @@
 
             //make treeStuff entity visible
             panoElement.setAttribute("src", "#forestPano");
-            document.getElementById("treeStuff").setAttribute("visible", "true");
+            document.getElementById("forestStuff").setAttribute("visible", "true");
             document.getElementById("creekStuff").setAttribute("visible", "false");
             document.getElementById("primitiveStuff").setAttribute("visible", "false");
 
@@ -151,7 +155,7 @@
             //make treeStuff entity visible
             panoElement.setAttribute("src", "#creekPano");
             document.getElementById("creekStuff").setAttribute("visible", "true");
-            document.getElementById("treeStuff").setAttribute("visible", "false");
+            document.getElementById("forestStuff").setAttribute("visible", "false");
             document.getElementById("primitiveStuff").setAttribute("visible", "false");
 
             // audio = new Audio('https://sdykes3.github.io/forestVR/my-img/streamBest.wav');
@@ -169,7 +173,7 @@
             //make treeStuff entity visible
             panoElement.setAttribute("color", "#c2efe8");
             document.getElementById("primitiveStuff").setAttribute("visible", "true");
-            document.getElementById("treeStuff").setAttribute("visible", "false");
+            document.getElementById("forestStuff").setAttribute("visible", "false");
             document.getElementById("creekStuff").setAttribute("visible", "false");
 
             audioForest.pause();
