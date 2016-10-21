@@ -46,25 +46,23 @@
 
 
 
-      <!-- 1. Tree objects -->
+      <!-- 1. Forest objects -->
       <a-entity id="forestStuff" visible="false">
         <a-sky id="pano" src="#forestPano" color="white"></a-sky>
         
         <a-entity collada-model="#tree1" onclick="showTextForest1()" position="-2 -1 0"></a-entity>
-        <a-entity collada-model="#tree1" position="-4 -1 8" scale=".5 .5 .5" rotation="0 110 0"></a-entity>
-        <a-entity collada-model="#tree1" position="6 -1 -4" rotation="0 190 0"></a-entity>
-        <a-entity collada-model="#tree1" position="13 -1 6" scale="3 3 3" rotation="0 90 0"></a-entity>
+        <a-entity collada-model="#tree1" onclick="showTextForest2()" position="-4 -1 8" scale=".5 .5 .5" rotation="0 110 0"></a-entity>
+        <a-entity collada-model="#tree1" onclick="showTextForest3()" position="6 -1 -4" rotation="0 190 0"></a-entity>
+        <a-entity collada-model="#tree1" onclick="showTextForest4()" position="13 -1 6" scale="3 3 3" rotation="0 90 0"></a-entity>
 
         <a-text id="treeText1" text="The original forests of the Piedmont consisted mainly of oak and hickory trees." 
-          visible="false" color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+          visible="false" color="white" position="-4 -2 1" rotation= "0 20 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
         <a-text id="treeText2" text="Oak and poplar trees are among the largest found here, growing up to 156ft tall and dominating the canpoy." 
-          visible="false" color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+          visible="false" color="white" position="6 -1 3" rotation= "0 250 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
         <a-text id="treeText3" text="Yellow poplars (Liriodendron tulipifera) make up roughly 20 percent of the forest trees." 
-          visible="false" color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+          visible="false" color="white" position="2 -1 -2" rotation= "0 300 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
         <a-text id="treeText4" text="Pine trees, such as the loblolly pine (Pinus taeda), are relatively uncommon here. This is in sharp contrast to modern vegetation patterns." 
-          visible="false" color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
-        <a-text id="treeText4" text="The Piedmont is known for its old, highly weathered, and fairly nutrient-poor soils." 
-          visible="false" color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+          visible="false" color="white" position="-2 -2.2 9" rotation= "0 120 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
       </a-entity>
 
 
@@ -78,6 +76,10 @@
         <a-entity collada-model="#tree1" position="7 -1 14"></a-entity>
         <a-entity collada-model="#tree1" position="13 -1 7" scale="3 3 3" rotation="-15 90 0"></a-entity>
         <a-entity collada-model="#tree1" position="-21 -1 0" scale="3 3 3" rotation="0 90 0"></a-entity>
+
+
+        <a-text id="creekText1" text="The Piedmont is known for its old, highly weathered, and fairly nutrient-poor soils." 
+          visible="false" color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
       </a-entity>
 
 
@@ -91,7 +93,7 @@
         <a-sphere onclick="creekScene()" position="5 3 -3" radius="0.5" color="blue" opacity="1"></a-sphere>
 
         <a-text id="defText1" text="The Piedmont is a plateau region located in the eastern United States. It spans several states." 
-          visible="true" color="green" position="4 1.5 2" rotation= "0 270 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+          visible="true" color="green" position="4 1.5 3" rotation= "0 270 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
         <a-text id="defText2" text="Little original vegetation in this area exists. In the Atlanta area, only Fernbank Museum of Natural History has original forest growth, spanning 65-acres."
           visible="true" color="green" position="-3 1.2 8" rotation= "0 90 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
         <a-text id="defText3" text="Modern development and invasive species has transformed the landscape, making it difficult to imagine the way the region used to be. This VR experience aims to educate and immerse the user in the forests of the past." 
@@ -153,6 +155,28 @@
             document.getElementById("treeText1").setAttribute("visible", "false");
           }
         }
+        function showTextForest2() {
+          if(document.getElementById("treeText2").getAttribute("visible") === false) {
+            document.getElementById("treeText2").setAttribute("visible", "true");
+          } else if(document.getElementById("treeText2").getAttribute("visible") === true) {
+            document.getElementById("treeText2").setAttribute("visible", "false");
+          }
+        }
+        function showTextForest3() {
+          if(document.getElementById("treeText3").getAttribute("visible") === false) {
+            document.getElementById("treeText3").setAttribute("visible", "true");
+          } else if(document.getElementById("treeText3").getAttribute("visible") === true) {
+            document.getElementById("treeText3").setAttribute("visible", "false");
+          }
+        }
+        function showTextForest4() {
+          if(document.getElementById("treeText4").getAttribute("visible") === false) {
+            document.getElementById("treeText4").setAttribute("visible", "true");
+          } else if(document.getElementById("treeText4").getAttribute("visible") === true) {
+            document.getElementById("treeText4").setAttribute("visible", "false");
+          }
+        }
+
 
         function forestScene() {
 
