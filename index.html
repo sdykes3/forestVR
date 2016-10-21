@@ -23,6 +23,7 @@
         <img id="clearPano" src="https://sdykes3.github.io/forestVR/my-img/clearing.jpg">
         <img id="creekPano" src="https://sdykes3.github.io/forestVR/my-img/creek.jpg">
         <audio id="forestSound" src="https://sdykes3.github.io/forestVR/my-img/forestBest.wav"></audio>
+        <audio id="streamSound" src="https://sdykes3.github.io/forestVR/my-img/streamBest.wav"></audio>
 
         <a-asset-item id="tree1" src="https://sdykes3.github.io/forestVR/my-img/models/Tree Type3 04.dae"></a-asset-item>
       </a-assets>
@@ -35,9 +36,15 @@
 
 
 
+
+      <a-sphere id="soundObject" onclick="disappear()" position="-5 3 -3" radius="0.5" color="#EF2D5E" opacity="1"></a-sphere>
+      
+
       <!-- 1. Tree objects -->
-      <a-entity id="treeStuff">
+      <a-entity id="treeStuff" visible="false">
         <a-entity collada-model="#tree1" position="0 0 0"></a-entity>
+        <a-entity collada-model="#tree1" position="6 -1 -4"></a-entity>
+        <a-entity collada-model="#tree1" position="13 -1 7" scale="3 3 3" rotation="0 90 0"></a-entity>
       </a-entity>
 
 
@@ -149,6 +156,18 @@
 
             var audio = new Audio('https://sdykes3.github.io/forestVR/my-img/forestBest.wav');
             audio.play();
+        }
+
+        function disappear() {
+            console.log("disappear");
+
+            sphereAnimElement.emit("move!");
+            boxAnimElement.emit("fade!");
+            panoElement.setAttribute("src", "#forestPano");
+            cylElement.setAttribute('color', 'pink');
+
+            rightText.setAttribute('text', "LOCATION 1");
+            document.getElementById("treeStuff").setAttribute("visible", "true");
         }
     </script>
 

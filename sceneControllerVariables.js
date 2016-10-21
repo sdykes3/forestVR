@@ -21,6 +21,10 @@ var debugText;
 var panoElement;
 
 
+
+var treeStuff;
+
+
 //Progress variables.
 var targetLocation=0;
 var currentMessage=0;

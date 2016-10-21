@@ -38,6 +38,8 @@ function run () {
 
   panoElement=document.getElementById("pano");
 
+  treeStuff=document.getElementById("treeStuff");
+
   //2.Set the beginning text.
   setInitialText();
 

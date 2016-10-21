@@ -85,8 +85,12 @@ function updateScene()
 
             sphereAnimElement.emit("move!");
             boxAnimElement.emit("fade!");
-            panoElement.setAttribute("src", "#museum");
+            panoElement.setAttribute("src", "#forestPano");
             cylElement.setAttribute('color', 'pink');
+
+            rightText.setAttribute('text', "LOCATION 1");
+
+            //make treeStuff entity visible
 
         }
 
@@ -104,8 +108,10 @@ function updateScene()
             sphereElement.setAttribute('radius',"0.75");
             spinBall.setAttribute('visible', 'true');
             spinBallAnim.emit("move!");
-            panoElement.setAttribute("src", "#aquarium");
+            panoElement.setAttribute("src", "#creekPano");
             boxElement.setAttribute('height','0.5');
+
+            rightText.setAttribute('text', "LOCATION 2");
 
         }
 
