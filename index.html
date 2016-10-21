@@ -60,7 +60,7 @@
         <a-text id="treeText4" text="Oak and poplar trees are among the largest found here, growing up to 156ft tall and dominating the canpoy." 
           visible="false" color="white" position="6 -1 3" rotation= "0 250 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
         <a-text id="treeText3" text="Yellow poplars (Liriodendron tulipifera) make up roughly 20 percent of the forest trees." 
-          visible="false" color="white" position="2 -1 -2" rotation= "0 300 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+          visible="false" color="white" position="1 -1 -2" rotation= "0 320 0" scale="1.5 1.5 1.5" width="300" align="center"></a-text>
         <a-text id="treeText2" text="Pine trees, such as the loblolly pine (Pinus taeda), are relatively uncommon here. This is in sharp contrast to modern vegetation patterns." 
           visible="false" color="white" position="-2 -2.2 9" rotation= "0 120 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
       </a-entity>
@@ -79,6 +79,12 @@
 
 
         <a-text id="creekText1" text="The Piedmont is known for its old, highly weathered, and fairly nutrient-poor soils." 
+          visible="false" color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="creekText2" text="The Piedmont is known for its old, highly weathered, and fairly nutrient-poor soils." 
+          visible="false" color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="creekText3" text="The Piedmont is known for its old, highly weathered, and fairly nutrient-poor soils." 
+          visible="false" color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="creekText4" text="The Piedmont is known for its old, highly weathered, and fairly nutrient-poor soils." 
           visible="false" color="white" position="-4 -1 1" rotation= "0 0 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
       </a-entity>
 
@@ -174,6 +180,36 @@
             document.getElementById("treeText4").setAttribute("visible", "true");
           } else if(document.getElementById("treeText4").getAttribute("visible") === true) {
             document.getElementById("treeText4").setAttribute("visible", "false");
+          }
+        }
+
+
+        function showTextCreek1() {
+          if(document.getElementById("creekText1").getAttribute("visible") === false) {
+            document.getElementById("creekText1").setAttribute("visible", "true");
+          } else if(document.getElementById("creekText1").getAttribute("visible") === true) {
+            document.getElementById("creekText1").setAttribute("visible", "false");
+          }
+        }
+        function showTextCreek2() {
+          if(document.getElementById("creekText2").getAttribute("visible") === false) {
+            document.getElementById("creekText2").setAttribute("visible", "true");
+          } else if(document.getElementById("creekText2").getAttribute("visible") === true) {
+            document.getElementById("creekText2").setAttribute("visible", "false");
+          }
+        }
+        function showTextCreek3() {
+          if(document.getElementById("creekText3").getAttribute("visible") === false) {
+            document.getElementById("creekText3").setAttribute("visible", "true");
+          } else if(document.getElementById("creekText3").getAttribute("visible") === true) {
+            document.getElementById("creekText3").setAttribute("visible", "false");
+          }
+        }
+        function showTextCreek4() {
+          if(document.getElementById("creekText4").getAttribute("visible") === false) {
+            document.getElementById("creekText4").setAttribute("visible", "true");
+          } else if(document.getElementById("creekText4").getAttribute("visible") === true) {
+            document.getElementById("creekText4").setAttribute("visible", "false");
           }
         }
 
