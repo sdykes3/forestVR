@@ -93,12 +93,14 @@ function updateScene()
 
             //make treeStuff entity visible
             panoElement.setAttribute("src", "#forestPano");
-            document.getElementById("forestStuff").setAttribute("visible", "true");
-            document.getElementById("creekStuff").setAttribute("visible", "false");
-            document.getElementById("primitiveStuff").setAttribute("visible", "false");
+            // document.getElementById("forestStuff").setAttribute("visible", "true");
+            // document.getElementById("creekStuff").setAttribute("visible", "false");
+            // document.getElementById("primitiveStuff").setAttribute("visible", "false");
 
             audio = new Audio('https://sdykes3.github.io/forestVR/my-img/forestBest.wav');
             audio.play();
+
+            
 
         }
 
@@ -124,9 +126,9 @@ function updateScene()
 
             //make treeStuff entity visible
             panoElement.setAttribute("src", "#creekPano");
-            document.getElementById("creekStuff").setAttribute("visible", "true");
-            document.getElementById("forestStuff").setAttribute("visible", "false");
-            document.getElementById("primitiveStuff").setAttribute("visible", "false");
+            // document.getElementById("creekStuff").setAttribute("visible", "true");
+            // document.getElementById("forestStuff").setAttribute("visible", "false");
+            // document.getElementById("primitiveStuff").setAttribute("visible", "false");
 
             audio = new Audio('https://sdykes3.github.io/forestVR/my-img/streamBest.wav');
             audio.play();
