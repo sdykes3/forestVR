@@ -51,28 +51,41 @@ var targetLocation=0;
 var currentMessage=0;
 var isJourneyDone=false;
 
-//Data we need to tell we're making progress.
-var maxDistance=0.055; //in km.
+var maxDistance=0.055; // in km
 var locations= [
-                  //Location 1: Clough Commons.
+                  //GT Campanile
                   {
-                    name: "Psi U",
-                    latitude : 33.7774918,
-                    longitude: -84.39175829
+                    name: "Campanile",
+                    latitude : 33.774238,
+                    longitude: -84.398073
                   },
 
-                  //Location 2: Skiles.
+                  //Skiles
                   {
                     name: "Skiles Building",
                     latitude : 33.773576,
                     longitude: -84.395639
                   },
 
-                  //Location 3: The Student Center.
+                  //My house, for testing
                   {
-                    name: "The Student Center",
-                    latitude : 33.773928,
-                    longitude: -84.398388
+                    name: "Psi U",
+                    latitude : 33.7774918,
+                    longitude: -84.39175829
+                  },
+
+                  //South-eastern Piedmont Park, location of historic but currently non-existant stream
+                  {
+                    name: "Piedmont Park",
+                    latitude : 33.781832,
+                    longitude: -84.372836
+                  },
+
+                  //Penn and Ponce, location of historic but currently non-existant stream
+                  {
+                    name: "Penn and Ponce",
+                    latitude : 33.772584,
+                    longitude: -84.379021
                   }
               ];
 
