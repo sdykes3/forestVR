@@ -5,8 +5,140 @@
 function setInitialText() {
     console.log(geolocationOptions);
     console.log(checkReceivedLocation);
-    console.log("posdata = " + positionData);
 }
+
+
+// Shows / hides scene specific information, when clicking trees
+function showTextForest1() {
+  if(document.getElementById("treeText1").getAttribute("visible") === false) {
+    document.getElementById("treeText1").setAttribute("visible", "true");
+  } else if(document.getElementById("treeText1").getAttribute("visible") === true) {
+    document.getElementById("treeText1").setAttribute("visible", "false");
+  }
+}
+function showTextForest2() {
+  if(document.getElementById("treeText2").getAttribute("visible") === false) {
+    document.getElementById("treeText2").setAttribute("visible", "true");
+  } else if(document.getElementById("treeText2").getAttribute("visible") === true) {
+    document.getElementById("treeText2").setAttribute("visible", "false");
+  }
+}
+function showTextForest3() {
+  if(document.getElementById("treeText3").getAttribute("visible") === false) {
+    document.getElementById("treeText3").setAttribute("visible", "true");
+  } else if(document.getElementById("treeText3").getAttribute("visible") === true) {
+    document.getElementById("treeText3").setAttribute("visible", "false");
+  }
+}
+function showTextForest4() {
+  if(document.getElementById("treeText4").getAttribute("visible") === false) {
+    document.getElementById("treeText4").setAttribute("visible", "true");
+  } else if(document.getElementById("treeText4").getAttribute("visible") === true) {
+    document.getElementById("treeText4").setAttribute("visible", "false");
+  }
+}
+
+// Shows / hides scene specific information, when clicking trees
+function showTextCreek1() {
+  if(document.getElementById("creekText1").getAttribute("visible") === false) {
+    document.getElementById("creekText1").setAttribute("visible", "true");
+  } else if(document.getElementById("creekText1").getAttribute("visible") === true) {
+    document.getElementById("creekText1").setAttribute("visible", "false");
+  }
+}
+function showTextCreek2() {
+  if(document.getElementById("creekText2").getAttribute("visible") === false) {
+    document.getElementById("creekText2").setAttribute("visible", "true");
+  } else if(document.getElementById("creekText2").getAttribute("visible") === true) {
+    document.getElementById("creekText2").setAttribute("visible", "false");
+  }
+}
+function showTextCreek3() {
+  if(document.getElementById("creekText3").getAttribute("visible") === false) {
+    document.getElementById("creekText3").setAttribute("visible", "true");
+  } else if(document.getElementById("creekText3").getAttribute("visible") === true) {
+    document.getElementById("creekText3").setAttribute("visible", "false");
+  }
+}
+function showTextCreek4() {
+  if(document.getElementById("creekText4").getAttribute("visible") === false) {
+    document.getElementById("creekText4").setAttribute("visible", "true");
+  } else if(document.getElementById("creekText4").getAttribute("visible") === true) {
+    document.getElementById("creekText4").setAttribute("visible", "false");
+  }
+}
+
+// Loads Forest Scene
+function forestScene() {
+    console.log("This is forestScene()");
+
+    //turn off default scene info
+    document.getElementById("defText1").setAttribute("visible", "false");
+    document.getElementById("defText2").setAttribute("visible", "false");
+    document.getElementById("defText3").setAttribute("visible", "false");
+
+    document.getElementById("debugText").setAttribute("visible", "false");
+    document.getElementById("debugText2").setAttribute("visible", "false");
+
+    //make treeStuff entity visible
+    panoElement.setAttribute("src", "#forestPano");
+    document.getElementById("forestStuff").setAttribute("visible", "true");
+    document.getElementById("creekStuff").setAttribute("visible", "false");
+    document.getElementById("primitiveStuff").setAttribute("visible", "false");
+
+    // audio = new Audio('https://sdykes3.github.io/forestVR/my-img/forestBest.wav');
+    audioForest.play();
+    audioCreek.pause();
+
+}
+
+// Loads Creek Scene
+function creekScene() {
+    console.log("This is creekScene()");
+
+    //turn off default scene info
+    document.getElementById("defText1").setAttribute("visible", "false");
+    document.getElementById("defText2").setAttribute("visible", "false");
+    document.getElementById("defText3").setAttribute("visible", "false");
+
+    document.getElementById("debugText").setAttribute("visible", "false");
+    document.getElementById("debugText2").setAttribute("visible", "false");
+
+    //make treeStuff entity visible
+    panoElement.setAttribute("src", "#creekPano");
+    document.getElementById("creekStuff").setAttribute("visible", "true");
+    document.getElementById("forestStuff").setAttribute("visible", "false");
+    document.getElementById("primitiveStuff").setAttribute("visible", "false");
+
+    // audio = new Audio('https://sdykes3.github.io/forestVR/my-img/streamBest.wav');
+    audioForest.pause();
+    audioCreek.play();
+
+}
+
+// Loads Default Scene
+function defaultScene() {
+    //turn on default scene info
+    document.getElementById("defText1").setAttribute("visible", "true");
+    document.getElementById("defText2").setAttribute("visible", "true");
+    document.getElementById("defText3").setAttribute("visible", "true");
+
+    document.getElementById("debugText").setAttribute("visible", "true");
+    document.getElementById("debugText2").setAttribute("visible", "true");
+
+    //make treeStuff entity visible
+    panoElement.setAttribute("src", "#woc");
+    // panoElement.setAttribute("color", "#c2efe8");
+    document.getElementById("primitiveStuff").setAttribute("visible", "true");
+    document.getElementById("forestStuff").setAttribute("visible", "false");
+    document.getElementById("creekStuff").setAttribute("visible", "false");
+
+    audioForest.pause();
+    audioCreek.pause();
+
+}
+
+
 
 
 //These are geolocation related functions.
