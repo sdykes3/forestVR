@@ -21,20 +21,11 @@ function run () {
   console.log("Starting the program.");
 
   //1. Initialize all the variables to access the scene objects.
-  sphereElement=document.getElementById("sphere1");
-  sphereAnimElement=document.getElementById("sphere1Anim");
-
-  boxElement=document.getElementById("box1");
-  boxAnimElement=document.getElementById("box1Anim");
-
-  cylElement=document.getElementById("cyl1");
-
-  spinBallElement=document.getElementById("spinBallAnim");
-  spinBallAnimElement=document.getElementById("spinBall");
 
   leftText=document.getElementById("locationText");  //status, or current location text.
   rightText=document.getElementById("progressText"); //progress text.
   debugText=document.getElementById("debugText"); //progress text.
+  debugText2=document.getElementById("debugText2"); //progress text.
 
   panoElement=document.getElementById("pano");
 

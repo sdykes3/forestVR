@@ -3,24 +3,17 @@
 
 //Variables that access the scene objects.
 //These will be declared later in the program
-var sphereElement;
-var sphereAnimElement;
-
-var boxElement;
-var boxAnimElement;
-
-var cylElement;
-
-var spinBallElement;
-var spinBallAnimElement;
 
 var leftText;  //status text.
 var rightText; //progress text.
 var debugText;
+var debugText2;
 
 var panoElement;
 var audioForest = new Audio('https://sdykes3.github.io/forestVR/my-img/forestBest.wav');
 var audioCreek = new Audio('https://sdykes3.github.io/forestVR/my-img/streamBest.wav');
+
+var inDefault = true; //keeps track of which scene has been loaded
 
 //looping for audio, in different browsers
 if (typeof audioCreek.loop == 'boolean')
