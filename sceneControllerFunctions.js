@@ -69,11 +69,14 @@ function forestScene() {
     document.getElementById("defText1").setAttribute("visible", "false");
     document.getElementById("defText2").setAttribute("visible", "false");
     document.getElementById("defText3").setAttribute("visible", "false");
+    document.getElementById("defText4").setAttribute("visible", "false");
 
     document.getElementById("debugText").setAttribute("visible", "false");
     document.getElementById("debugText2").setAttribute("visible", "false");
+    document.getElementById("instrText").setAttribute("visible", "false");
+    document.getElementById("instrText2").setAttribute("visible", "false");
 
-    //make treeStuff entity visible
+    //make forestStuff entity visible
     panoElement.setAttribute("src", "#forestPano");
     document.getElementById("forestStuff").setAttribute("visible", "true");
     document.getElementById("creekStuff").setAttribute("visible", "false");
@@ -93,11 +96,14 @@ function creekScene() {
     document.getElementById("defText1").setAttribute("visible", "false");
     document.getElementById("defText2").setAttribute("visible", "false");
     document.getElementById("defText3").setAttribute("visible", "false");
+    document.getElementById("defText4").setAttribute("visible", "false");
 
     document.getElementById("debugText").setAttribute("visible", "false");
     document.getElementById("debugText2").setAttribute("visible", "false");
+    document.getElementById("instrText").setAttribute("visible", "false");
+    document.getElementById("instrText2").setAttribute("visible", "false");
 
-    //make treeStuff entity visible
+    //make creekStuff entity visible
     panoElement.setAttribute("src", "#creekPano");
     document.getElementById("creekStuff").setAttribute("visible", "true");
     document.getElementById("forestStuff").setAttribute("visible", "false");
@@ -115,13 +121,14 @@ function defaultScene() {
     document.getElementById("defText1").setAttribute("visible", "true");
     document.getElementById("defText2").setAttribute("visible", "true");
     document.getElementById("defText3").setAttribute("visible", "true");
+    document.getElementById("defText4").setAttribute("visible", "true");
 
     document.getElementById("debugText").setAttribute("visible", "true");
     document.getElementById("debugText2").setAttribute("visible", "true");
+    document.getElementById("instrText").setAttribute("visible", "true");
+    document.getElementById("instrText2").setAttribute("visible", "true");
 
-    //make treeStuff entity visible
     panoElement.setAttribute("src", "#woc");
-    // panoElement.setAttribute("color", "#c2efe8");
     document.getElementById("primitiveStuff").setAttribute("visible", "true");
     document.getElementById("forestStuff").setAttribute("visible", "false");
     document.getElementById("creekStuff").setAttribute("visible", "false");
@@ -163,9 +170,9 @@ function checkReceivedLocation(positionData) {
                                    locations[1].latitude);
 
 
-    var resultText0="Distance to Forest scene is "+ newDistance0.toFixed(4)*1000 +"m. ";
+    var resultText0="Distance to Forest scene is "+ (newDistance0*1000).toFixed(4) +"m.";
 
-    var resultText1="Distance to Creek scene is "+ newDistance1.toFixed(4)*1000 +"m. ";
+    var resultText1="Distance to Creek scene is "+ (newDistance1*1000).toFixed(4) +"m.";
 
     console.log(resultText0);
     console.log(resultText1);
@@ -183,7 +190,7 @@ function checkReceivedLocation(positionData) {
 
     } else {
         console.log("Forest location hasn't been reached yet.");
-        resultText0+=" Forest location hasn't been reached yet.";
+        resultText0+=" Location hasn't been reached yet.";
 
         //If not already displaying default scene, load it - in the event of walking out of range of other scenes
         if(!inDefault && !inCreek) {
@@ -207,7 +214,7 @@ function checkReceivedLocation(positionData) {
 
     } else {
         console.log("Creek location hasn't been reached yet.");
-        resultText1+=" Creek location hasn't been reached yet.";
+        resultText1+=" Location hasn't been reached yet.";
 
         //If not already displaying default scene, load it - in the event of walking out of range of other scenes
         if(!inDefault && !inForest) {

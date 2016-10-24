@@ -74,12 +74,7 @@
       <!-- 1. Default scene objects -->
 
       <a-entity id="primitiveStuff" visible="true">
-        <!-- <a-sky id="pano" color="#c2efe8"></a-sky> -->
         <a-sky id="pano" src="#woc" color="white"></a-sky>
-
-        <a-sphere onclick="forestScene()" position="-5 5 -3" radius="0.5" color="green" opacity="1"></a-sphere>
-        <a-sphere onclick="defaultScene()" position="0 5 -3" radius="0.5" color="#EF2D5E" opacity="1"></a-sphere>
-        <a-sphere onclick="creekScene()" position="5 5 -3" radius="0.5" color="blue" opacity="1"></a-sphere>
 
         <a-text id="defText1" text="The Piedmont is a plateau region located in the eastern United States. It spans several states." 
           visible="true" color="green" position="4 1 2" rotation= "0 270 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
@@ -96,19 +91,27 @@
       <!-- 2. Text.-->
       </a-entity id="textStuff" visible="true">
         <a-text id="debugText" text="The current distance will be displayed here."
-                 color="pink" position="-3.5 1 1" rotation= "0 40 0" scale="1.5 1.5 1.5" width="350" align="right">
+                 color="white" position="-3.5 1 1" rotation= "0 40 0" scale="1.5 1.5 1.5" width="350" align="right">
         </a-text>
 
         <a-text id="debugText2" text="The current distance will be displayed here."
-                 color="pink" position="1.5 1 0" rotation= "0 -40 0" scale="1.5 1.5 1.5" width="350" align="left">
+                 color="white" position="1.5 1 0" rotation= "0 -40 0" scale="1.5 1.5 1.5" width="350" align="left">
+        </a-text>
+
+        <a-text id="instrText" text="Go to the Forest location."
+                 color="white" position="-3.5 3 1" rotation= "0 40 0" scale="1.5 1.5 1.5" width="350" align="right">
+        </a-text>
+
+        <a-text id="instrText2" text="Go to the Creek location."
+                 color="white" position="1.5 3 0" rotation= "0 -40 0" scale="1.5 1.5 1.5" width="350" align="left">
         </a-text>
       </a-entity>
 
 
       <!-- 3. Debug scene change function calls.-->
-      <a-sphere onclick="forestScene()" position="-5 5 -3" radius="0.5" color="green" opacity="1"></a-sphere>
-      <a-sphere onclick="defaultScene()" position="0 5 -3" radius="0.5" color="#EF2D5E" opacity="1"></a-sphere>
-      <a-sphere onclick="creekScene()" position="5 5 -3" radius="0.5" color="blue" opacity="1"></a-sphere>
+<!--       <a-sphere onclick="forestScene()" position="-5 6 -3" radius="0.5" color="green" opacity="1"></a-sphere>
+      <a-sphere onclick="defaultScene()" position="0 6 -3" radius="0.5" color="#EF2D5E" opacity="1"></a-sphere>
+      <a-sphere onclick="creekScene()" position="5 6 -3" radius="0.5" color="blue" opacity="1"></a-sphere> -->
 
 
       <!--The cursor-->
@@ -151,6 +154,14 @@
       };
 
       var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_options);
+
+
+
+
+
+
+
+
 
     </script>
 

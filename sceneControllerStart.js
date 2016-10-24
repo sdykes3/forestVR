@@ -35,11 +35,11 @@ else
     }, false);
 }
 
-var forestStuff;
-var creekStuff;
-var primitiveStuff;
+var forestStuff; //forest scene objects
+var creekStuff; //creek scene objects
+var primitiveStuff; //information about VR experience, Atlanta panorama
 
-var maxDistance=0.05; // in km
+var maxDistance=0.05; //in km
 var locations= [
                   //Busy road by North Avenue and Techwood
                   {
