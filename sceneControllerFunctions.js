@@ -17,107 +17,6 @@ function setInitialText()
 }
 
 
-// function updateScene()
-// {
-//     targetLocation++;
-//     currentMessage++;
-
-//     if(targetLocation>=locations.length) {
-//       //We are finished.  We can stop fetching locations.
-//       navigator.geolocation.clearWatch(geolocationCall);
-//       isJourneyDone=true;
-
-//       //Updating to the final messages.
-//       leftText.setAttribute('text', locationMessages[currentMessage] );
-//       rightText.setAttribute('text', progressMessages[currentMessage] );
-
-
-//       // //Making a few more changes.
-//       // boxAnimElement.emit("stop!");
-//       // boxElement.setAttribute('color','purple');
-//       // cylElement.setAttribute('opacity', '0.5');
-//       // panoElement.setAttribute("src", "#century");
-//       // panoElement.setAttribute('color','pink');
-//     }
-
-//     else {
-
-//         //You have not reached the last area yet.
-
-//         //Updating the messages.
-//         leftText.setAttribute('text', locationMessages[currentMessage] );
-//         rightText.setAttribute('text', progressMessages[currentMessage] );
-
-
-//         //Making the animation changes.
-//         if(targetLocation === 1) {
-//           //now moving to target location 1.
-
-//           //Scenery changes in location 2 (1, if starting from 0):
-//             //The ball moves.
-//             //The box fades.
-//             //The texts are updated.(already did this above.)
-//             //also, change the panorama.
-
-//             // sphereAnimElement.emit("move!");
-//             // boxAnimElement.emit("fade!");
-//             // panoElement.setAttribute("src", "#forestPano");
-//             // cylElement.setAttribute('color', 'pink');
-
-
-//             leftText.setAttribute('text', "");
-//             rightText.setAttribute('text', "LOCATION 1");
-//             debugText.setAttribute('text', "");
-
-//             //make treeStuff entity visible
-//             panoElement.setAttribute("src", "#forestPano");
-//             // document.getElementById("forestStuff").setAttribute("visible", "true");
-//             // document.getElementById("creekStuff").setAttribute("visible", "false");
-//             // document.getElementById("primitiveStuff").setAttribute("visible", "false");
-
-//             audio = new Audio('https://sdykes3.github.io/forestVR/my-img/forestBest.wav');
-//             audio.play();
-
-
-
-//         }
-
-//         if(targetLocation === 2) {
-//           //now moving to target location 2.
-
-//           //Scenery changes in location 3 (2, if starting from 0):
-//             //Object animations change.
-//             //The rotating green ball is visible and moving.
-//             //The text color changes.
-//             //also, change the panorama.
-
-//             // sphereElement.setAttribute('color',"brown");
-//             // sphereElement.setAttribute('radius',"0.75");
-//             // spinBall.setAttribute('visible', 'true');
-//             // spinBallAnim.emit("move!");
-//             // boxElement.setAttribute('height','0.5');
-
-
-//             // leftText.setAttribute('text', "");
-//             rightText.setAttribute('text', "LOCATION 2");
-//             // debugText.setAttribute('text', "");
-
-//             //make treeStuff entity visible
-//             panoElement.setAttribute("src", "#creekPano");
-//             // document.getElementById("creekStuff").setAttribute("visible", "true");
-//             // document.getElementById("forestStuff").setAttribute("visible", "false");
-//             // document.getElementById("primitiveStuff").setAttribute("visible", "false");
-
-//             audio = new Audio('https://sdykes3.github.io/forestVR/my-img/streamBest.wav');
-//             audio.play();
-
-//         }
-
-//     }
-
-// }
-
-
 //These are geolocation related functions.
 function error(err) {
     //Send error details to the console.
@@ -162,6 +61,9 @@ function checkReceivedLocation(positionData)
         console.log("Forest location was reached. Updating scene now.");
 
         inDefault = false;
+        inForest = true;
+        inCreek = false;
+        console.log("Calling forestScene() now.");
         forestScene();
 
     } else {
@@ -169,8 +71,10 @@ function checkReceivedLocation(positionData)
         resultText0+=" Forest location hasn't been reached yet.";
 
         //If not already displaying default scene, load it - in the event of walking out of range of other scenes
-        if(!inDefault) {
+        if(!inDefault && !inCreek) {
           inDefault = true;
+          inForest = false;
+          inCreek = false;
           defaultScene();
         }
     }
@@ -181,6 +85,9 @@ function checkReceivedLocation(positionData)
         console.log("Creek location  was reached. Updating scene now.");
 
         inDefault = false;
+        inForest = false;
+        inCreek = true;
+        console.log("Calling creekScene() now.");
         creekScene();
 
     } else {
@@ -188,8 +95,10 @@ function checkReceivedLocation(positionData)
         resultText1+=" Creek location hasn't been reached yet.";
 
         //If not already displaying default scene, load it - in the event of walking out of range of other scenes
-        if(!inDefault) {
+        if(!inDefault && !inForest) {
           inDefault = true;
+          inForest = false;
+          inCreek = false;
           defaultScene();
         }
     }

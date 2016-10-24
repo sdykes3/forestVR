@@ -14,6 +14,8 @@ var audioForest = new Audio('https://sdykes3.github.io/forestVR/my-img/forestBes
 var audioCreek = new Audio('https://sdykes3.github.io/forestVR/my-img/streamBest.wav');
 
 var inDefault = true; //keeps track of which scene has been loaded
+var inForest = false; //keeps track of which scene has been loaded
+var inCreek = false; //keeps track of which scene has been loaded
 
 //looping for audio, in different browsers
 if (typeof audioCreek.loop == 'boolean')
@@ -54,10 +56,10 @@ var maxDistance=0.055; //in km.
 var locations= [
                   //Location 1: Clough Commons.
                   {
-                    name: "Clough Commons",
-                    latitude : 33.774890,
-                    longitude: -84.396097
-                  }  ,
+                    name: "Psi U",
+                    latitude : 33.7774918,
+                    longitude: -84.39175829
+                  },
 
                   //Location 2: Skiles.
                   {
@@ -81,14 +83,6 @@ var locationMessages=
   "You arrive in the Clough Commons.",
   "You have found the Skiles Building.",
   "You have found the Student Center."
-];
-
-var progressMessages=
-[
-  "You have to go to the following 3 locations:\nFirst to the Clough Commons,\nthen to the Skiles Building,\nfinally to the Student Center.",
-  "You've arrived to the first location.  Now, go find the Skiles Building.",
-  "You've found the second location.  Go to your final stop: the Student Center",
-  "You completed the challenge. Your reward is an aframe animation!"
 ];
 
 
