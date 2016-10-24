@@ -39,21 +39,21 @@ var forestStuff;
 var creekStuff;
 var primitiveStuff;
 
-var maxDistance=0.06; // in km
+var maxDistance=0.05; // in km
 var locations= [
-                  //Busy road by Klaus
+                  //Busy road by North Avenue and Techwood
                   {
-                    name: "Klaus road",
-                    latitude : 33.777025,
-                    longitude: -84.395491
+                    name: "North Avenue",
+                    latitude : 33.771363,
+                    longitude: -84.391967
                   },
 
-                  //GT Campaline
+                  //Penn and Ponce, location of historic but currently non-existant stream
                   {
-                    name: "Campanile",
-                    latitude : 33.774238,
-                    longitude: -84.398073
-                  },,
+                    name: "Penn and Ponce",
+                    latitude : 33.772584,
+                    longitude: -84.379021
+                  },
 
                   //Skiles
                   {
@@ -62,11 +62,11 @@ var locations= [
                     longitude: -84.395639
                   },
 
-                  //My house, for testing
+                  //Busy road by Klaus
                   {
-                    name: "Psi U",
-                    latitude : 33.7774918,
-                    longitude: -84.39175829
+                    name: "Klaus road",
+                    latitude : 33.777025,
+                    longitude: -84.395491
                   },
 
                   //South-eastern Piedmont Park, location of historic but currently non-existant stream
@@ -76,11 +76,11 @@ var locations= [
                     longitude: -84.372836
                   },
 
-                  //Penn and Ponce, location of historic but currently non-existant stream
+                  //GT Campanile
                   {
-                    name: "Penn and Ponce",
-                    latitude : 33.772584,
-                    longitude: -84.379021
+                    name: "Campanile",
+                    latitude : 33.774238,
+                    longitude: -84.398073
                   }
               ];
 
