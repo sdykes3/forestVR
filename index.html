@@ -14,11 +14,7 @@
 
       <!-- 0. Art assets -->
       <a-assets>
-        <img id="aquarium" src="panoramas/aqui.jpg">
-        <img id="century" src="panoramas/cent.jpg">
-        <img id="piedmont" src="panoramas/pied.jpg">
-        <img id="museum" src="panoramas/high.jpg">
-        <img id="woc" src="panoramas/woc.jpg">
+        <img id="woc" src="https://sdykes3.github.io/forestVR/panoramas/woc.jpg">
         <img id="forestPano" src="https://sdykes3.github.io/forestVR/my-img/trees.jpg">
         <img id="clearPano" src="https://sdykes3.github.io/forestVR/my-img/clearing.jpg">
         <img id="creekPano" src="https://sdykes3.github.io/forestVR/my-img/creek.jpg">
@@ -31,7 +27,7 @@
 
 
       <!--Panorama default -->
-      <a-sky id="pano" color="#c2efe8"></a-sky>
+      <a-sky id="pano" src="#woc"></a-sky>
 
 
       <!-- Sound, either click or auto -->
@@ -86,18 +82,21 @@
       <!-- 1. Default scene objects -->
 
       <a-entity id="primitiveStuff" visible="true">
-        <a-sky id="pano" color="#c2efe8"></a-sky>
+        <!-- <a-sky id="pano" color="#c2efe8"></a-sky> -->
+        <a-sky id="pano" src="#woc" color="white"></a-sky>
 
         <a-sphere onclick="forestScene()" position="-5 5 -3" radius="0.5" color="green" opacity="1"></a-sphere>
         <a-sphere onclick="defaultScene()" position="0 5 -3" radius="0.5" color="#EF2D5E" opacity="1"></a-sphere>
         <a-sphere onclick="creekScene()" position="5 5 -3" radius="0.5" color="blue" opacity="1"></a-sphere>
 
         <a-text id="defText1" text="The Piedmont is a plateau region located in the eastern United States. It spans several states." 
-          visible="true" color="green" position="4 1.5 3" rotation= "0 270 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+          visible="true" color="green" position="4 1 2" rotation= "0 270 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
         <a-text id="defText2" text="Little original vegetation in this area exists. In the Atlanta area, only Fernbank Museum of Natural History has original forest growth, spanning 65-acres."
-          visible="true" color="green" position="-3 1.2 8" rotation= "0 90 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
-        <a-text id="defText3" text="Modern development and invasive species has transformed the landscape, making it difficult to imagine the way the region used to be. This VR experience aims to educate and immerse the user in the forests of the past. Tap trees for information about the area." 
-          visible="true" color="green" position="3 1 8" rotation= "0 180 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+          visible="true" color="yellow" position="-4 1 7" rotation= "0 90 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="defText3" text="Modern development and invasive species has transformed the landscape, making it difficult to imagine the way the region used to be. This VR experience aims to educate and immerse the user in the forests of the past." 
+          visible="true" color="blue" position="3 1 8" rotation= "0 180 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="defText4" text="Tap trees for information about the area." 
+          visible="true" color="blue" position="3 -0.75 8" rotation= "0 180 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
  
       </a-entity>
 
@@ -107,16 +106,16 @@
       <!-- 2. Text.-->
       </a-entity id="textStuff" visible="true">
         <a-text id="debugText" text="The current distance will be displayed here."
-                 color="blue" position="-3.5 1 1" rotation= "0 40 0" scale="1.5 1.5 1.5" width="350" align="right">
+                 color="pink" position="-3.5 1 1" rotation= "0 40 0" scale="1.5 1.5 1.5" width="350" align="right">
         </a-text>
 
         <a-text id="debugText2" text="The current distance will be displayed here."
-                 color="blue" position="1.5 1 0" rotation= "0 -40 0" scale="1.5 1.5 1.5" width="350" align="left">
+                 color="pink" position="1.5 1 0" rotation= "0 -40 0" scale="1.5 1.5 1.5" width="350" align="left">
         </a-text>
 
-        <a-text id="locationText" text="Your location text will appear here."
+<!--         <a-text id="locationText" text="Your location text will appear here."
                 color="#FF0080" position="-1 0 0" rotation= "0 0 0" scale="1.5 1.5 1.5" width="270" align="center">
-        </a-text>
+        </a-text> -->
       </a-entity>
 
 
@@ -294,7 +293,8 @@
             document.getElementById("locationText").setAttribute("visible", "true");
 
             //make treeStuff entity visible
-            panoElement.setAttribute("color", "#c2efe8");
+            panoElement.setAttribute("src", "#woc");
+            // panoElement.setAttribute("color", "#c2efe8");
             document.getElementById("primitiveStuff").setAttribute("visible", "true");
             document.getElementById("forestStuff").setAttribute("visible", "false");
             document.getElementById("creekStuff").setAttribute("visible", "false");

@@ -4,7 +4,7 @@
 //Variables that access the scene objects.
 //These will be declared later in the program
 
-var leftText;  //status text.
+//var leftText;  //status text.
 // var rightText; //progress text.
 var debugText;
 var debugText2;
