@@ -170,9 +170,9 @@ function checkReceivedLocation(positionData) {
                                    locations[1].latitude);
 
 
-    var resultText0="Distance to Forest scene is "+ (newDistance0*1000).toFixed(4) +"m.";
+    var resultText0="Distance to Forest scene is "+ (newDistance0*1000).toFixed(2) +"m.";
 
-    var resultText1="Distance to Creek scene is "+ (newDistance1*1000).toFixed(4) +"m.";
+    var resultText1="Distance to Creek scene is "+ (newDistance1*1000).toFixed(2) +"m.";
 
     console.log(resultText0);
     console.log(resultText1);
