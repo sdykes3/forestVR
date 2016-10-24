@@ -36,13 +36,7 @@
 
       <!-- Sound, either click or auto -->
       <!-- <a-sphere id="soundObject" onclick="playSound()" position="-5 3 -3" radius="0.5" color="#EF2D5E" opacity="1"></a-sphere> -->
-    
       <!-- <a-entity id="soundObject" sound="src: #forestSound; autoplay: true" position="-5 3 -3"></a-entity> -->
-
-
-      <a-sphere onclick="forestScene()" position="-5 4 -3" radius="0.5" color="green" opacity="1"></a-sphere>
-      <a-sphere onclick="defaultScene()" position="0 4 -3" radius="0.5" color="#EF2D5E" opacity="1"></a-sphere>
-      <a-sphere onclick="creekScene()" position="5 4 -3" radius="0.5" color="blue" opacity="1"></a-sphere>
 
 
 
@@ -94,9 +88,9 @@
       <a-entity id="primitiveStuff" visible="true">
         <a-sky id="pano" color="#c2efe8"></a-sky>
 
-        <a-sphere onclick="forestScene()" position="-5 4 -3" radius="0.5" color="green" opacity="1"></a-sphere>
-        <a-sphere onclick="defaultScene()" position="0 4 -3" radius="0.5" color="#EF2D5E" opacity="1"></a-sphere>
-        <a-sphere onclick="creekScene()" position="5 4 -3" radius="0.5" color="blue" opacity="1"></a-sphere>
+        <a-sphere onclick="forestScene()" position="-5 5 -3" radius="0.5" color="green" opacity="1"></a-sphere>
+        <a-sphere onclick="defaultScene()" position="0 5 -3" radius="0.5" color="#EF2D5E" opacity="1"></a-sphere>
+        <a-sphere onclick="creekScene()" position="5 5 -3" radius="0.5" color="blue" opacity="1"></a-sphere>
 
         <a-text id="defText1" text="The Piedmont is a plateau region located in the eastern United States. It spans several states." 
           visible="true" color="green" position="4 1.5 3" rotation= "0 270 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
@@ -111,7 +105,7 @@
 
 
 
-      <!-- 2. Left and Right text, and debug text.-->
+      <!-- 2. Text.-->
       <a-text id="debugText" text="The current distance will be displayed here."
                color="blue" position="-3.5 1 1" rotation= "0 40 0" scale="1.5 1.5 1.5" width="350" align="right">
       </a-text>
@@ -124,9 +118,13 @@
               color="#FF0080" position="-1 0 0" rotation= "0 0 0" scale="1.5 1.5 1.5" width="270" align="center">
       </a-text>
 
-      <a-text id="progressText" text="The option text will appear here, on the right."
-               color="yellow" position="3.5 0 0" rotation= "0 -60 0" scale="1.5 1.5 1.5" width="270" align="right">
-      </a-text>
+
+
+
+      <!-- 3. Debug scene change function calls.-->
+      <a-sphere onclick="forestScene()" position="-5 5 -3" radius="0.5" color="green" opacity="1"></a-sphere>
+      <a-sphere onclick="defaultScene()" position="0 5 -3" radius="0.5" color="#EF2D5E" opacity="1"></a-sphere>
+      <a-sphere onclick="creekScene()" position="5 5 -3" radius="0.5" color="blue" opacity="1"></a-sphere>
 
 
 
@@ -245,7 +243,7 @@
             document.getElementById("defText3").setAttribute("visible", "false");
 
             //leftText.setAttribute('text', "");
-            rightText.setAttribute('text', "LOCATION 1");
+            // rightText.setAttribute('text', "LOCATION 1");
             //debugText.setAttribute('text', "");
 
             //make treeStuff entity visible
@@ -268,7 +266,7 @@
             document.getElementById("defText3").setAttribute("visible", "false");
 
             // leftText.setAttribute('text', "");
-            rightText.setAttribute('text', "LOCATION 2");
+            // rightText.setAttribute('text', "LOCATION 2");
             // debugText.setAttribute('text', "");
 
             //make treeStuff entity visible
@@ -291,7 +289,7 @@
             document.getElementById("defText3").setAttribute("visible", "true");
 
             // leftText.setAttribute('text', "");
-            rightText.setAttribute('text', "DEFAULT SCENE VIEW");
+            // rightText.setAttribute('text', "DEFAULT SCENE VIEW");
             // debugText.setAttribute('text', "");
 
             //make treeStuff entity visible

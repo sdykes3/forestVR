@@ -23,7 +23,7 @@ function run () {
   //1. Initialize all the variables to access the scene objects.
 
   leftText=document.getElementById("locationText");  //status, or current location text.
-  rightText=document.getElementById("progressText"); //progress text.
+  //rightText=document.getElementById("progressText"); //progress text.
   debugText=document.getElementById("debugText"); //progress text.
   debugText2=document.getElementById("debugText2"); //progress text.
 

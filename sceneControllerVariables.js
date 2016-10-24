@@ -5,7 +5,7 @@
 //These will be declared later in the program
 
 var leftText;  //status text.
-var rightText; //progress text.
+// var rightText; //progress text.
 var debugText;
 var debugText2;
 
@@ -43,7 +43,6 @@ else
 var forestStuff;
 var creekStuff;
 var primitiveStuff;
-
 
 //Progress variables.
 var targetLocation=0;

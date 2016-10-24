@@ -6,10 +6,10 @@ function setInitialText()
 {
 
     leftText.setAttribute('text', locationMessages[currentMessage] );
-    rightText.setAttribute('text', progressMessages[currentMessage] );
+    //rightText.setAttribute('text', progressMessages[currentMessage] );
 
     console.log(locationMessages[currentMessage]);
-    console.log(progressMessages[currentMessage]);
+    // console.log(progressMessages[currentMessage]);
     console.log(geolocationOptions);
     console.log(checkReceivedLocation);
     console.log("posdata = " + positionData);
