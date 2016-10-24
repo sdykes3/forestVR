@@ -1,11 +1,4 @@
-//This file includes the functions that use the variables declared in
-//the variables file.
-
-
-function setInitialText() {
-    console.log(geolocationOptions);
-    console.log(checkReceivedLocation);
-}
+//This file includes the functions that use the variables declared in the start file, as well as controlling scene changing
 
 
 // Shows / hides scene specific information, when clicking trees
