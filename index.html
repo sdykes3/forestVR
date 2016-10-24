@@ -30,12 +30,6 @@
       <a-sky id="pano" src="#woc"></a-sky>
 
 
-      <!-- Sound, either click or auto -->
-      <!-- <a-sphere id="soundObject" onclick="playSound()" position="-5 3 -3" radius="0.5" color="#EF2D5E" opacity="1"></a-sphere> -->
-      <!-- <a-entity id="soundObject" sound="src: #forestSound; autoplay: true" position="-5 3 -3"></a-entity> -->
-
-
-
       <!-- 1. Forest objects -->
       <a-entity id="forestStuff" visible="false">
         <a-sky id="pano" src="#forestPano" color="white"></a-sky>
@@ -54,8 +48,6 @@
         <a-text id="treeText2" text="Pine trees, such as the loblolly pine (Pinus taeda), are relatively uncommon here. This is in sharp contrast to modern vegetation patterns." 
           visible="false" color="white" position="-2 -2.2 9" rotation= "0 120 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
       </a-entity>
-
-
 
 
       <!-- 1. Creek objects -->
@@ -101,8 +93,6 @@
       </a-entity>
 
 
-
-
       <!-- 2. Text.-->
       </a-entity id="textStuff" visible="true">
         <a-text id="debugText" text="The current distance will be displayed here."
@@ -115,13 +105,10 @@
       </a-entity>
 
 
-
       <!-- 3. Debug scene change function calls.-->
       <a-sphere onclick="forestScene()" position="-5 5 -3" radius="0.5" color="green" opacity="1"></a-sphere>
       <a-sphere onclick="defaultScene()" position="0 5 -3" radius="0.5" color="#EF2D5E" opacity="1"></a-sphere>
       <a-sphere onclick="creekScene()" position="5 5 -3" radius="0.5" color="blue" opacity="1"></a-sphere>
-
-
 
 
       <!--The cursor-->

@@ -20,24 +20,19 @@ function run () {
 
   console.log("Starting the program.");
 
-  //1. Initialize all the variables to access the scene objects.
-
-  //leftText=document.getElementById("locationText");  //status, or current location text.
-  //rightText=document.getElementById("progressText"); //progress text.
-  debugText=document.getElementById("debugText"); //progress text.
-  debugText2=document.getElementById("debugText2"); //progress text.
-
+  // Initialize all the variables to access the scene objects.
+  debugText=document.getElementById("debugText");
+  debugText2=document.getElementById("debugText2");
   panoElement=document.getElementById("pano");
 
   forestStuff=document.getElementById("forestStuff");
   creekStuff=document.getElementById("creekStuff");
   primitiveStuff=document.getElementById("primitiveStuff");
 
-  //2.Set the beginning text.
+  // Set the beginning text
   setInitialText();
 
-  //3.Make the geolocation call.  This function will do the rest of the
-  //variable checking for us.
+  // Geolocation call
   geolocationCall = navigator.geolocation.watchPosition(checkReceivedLocation,
                                                         error, geolocationOptions);
 

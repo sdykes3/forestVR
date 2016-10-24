@@ -2,18 +2,10 @@
 //the variables file.
 
 
-function setInitialText()
-{
-
-    leftText.setAttribute('text', locationMessages[currentMessage] );
-    //rightText.setAttribute('text', progressMessages[currentMessage] );
-
-    console.log(locationMessages[currentMessage]);
-    // console.log(progressMessages[currentMessage]);
+function setInitialText() {
     console.log(geolocationOptions);
     console.log(checkReceivedLocation);
     console.log("posdata = " + positionData);
-
 }
 
 
@@ -24,19 +16,17 @@ function error(err) {
    //Displaying an error message.
     var messageElement= document.getElementById("choiceMsg");
     messageElement.innerHTML = "<p>You weren't able to get the geolocation.<br> Check the console for more detail.</p>";
-
 }
 
-//This function is the one that determines whether to change the scenery or not.
-//It gets the distance between our current location and our chosen location.
-function checkReceivedLocation(positionData)
-{
+//This function is the one that determines whether to change the scenery or not
+//It gets the distance between our current location and our chosen location
+function checkReceivedLocation(positionData) {
 
     console.log("Checking location...");
 
     currentLocation = positionData.coords;
 
-    //calculating distance with the circleDistance script.
+    //calculating distance with the circleDistance script, for each scene
     var newDistance0=circleDistance(currentLocation.longitude,
                                    currentLocation.latitude,
                                    locations[0].longitude,

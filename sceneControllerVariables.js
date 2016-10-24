@@ -1,11 +1,6 @@
 
-//Variables that store properties for each of the three stages.
+//Variables that access the scene objects, which will be declared later in the program
 
-//Variables that access the scene objects.
-//These will be declared later in the program
-
-//var leftText;  //status text.
-// var rightText; //progress text.
 var debugText;
 var debugText2;
 
@@ -51,14 +46,21 @@ var targetLocation=0;
 var currentMessage=0;
 var isJourneyDone=false;
 
-var maxDistance=0.055; // in km
+var maxDistance=0.06; // in km
 var locations= [
-                  //GT Campanile
+                  //Busy road by Klaus
+                  {
+                    name: "Klaus road",
+                    latitude : 33.777025,
+                    longitude: -84.395491
+                  },
+
+                  //GT Campaline
                   {
                     name: "Campanile",
                     latitude : 33.774238,
                     longitude: -84.398073
-                  },
+                  },,
 
                   //Skiles
                   {
@@ -88,16 +90,6 @@ var locations= [
                     longitude: -84.379021
                   }
               ];
-
-//Status messages to be shown to the player.
-var locationMessages=
-[
-  "You are somewhere in Georgia Tech.",
-  "You arrive in the Clough Commons.",
-  "You have found the Skiles Building.",
-  "You have found the Student Center."
-];
-
 
 //Geolocation related variables.
 var geolocationCall;
