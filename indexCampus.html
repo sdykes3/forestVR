@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VR Forest</title>
+    <meta name="description" content="VR Forest">
+    <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+    <!--component used for text-->
+    <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
+  </head>
+  <body>
+
+    <a-scene id="3dScene">
+
+      <!-- 0. Art assets -->
+      <a-assets>
+        <img id="forestPano" src="https://sdykes3.github.io/forestVR/my-img/trees.jpg">
+        <img id="clearPano" src="https://sdykes3.github.io/forestVR/my-img/clearing.jpg">
+        <img id="creekPano" src="https://sdykes3.github.io/forestVR/my-img/creek.jpg">
+        <img id="woc" src="https://sdykes3.github.io/forestVR/my-img/woc.jpg">
+        <audio id="forestSound" src="https://sdykes3.github.io/forestVR/my-img/forestBest.wav"></audio>
+        <audio id="streamSound" src="https://sdykes3.github.io/forestVR/my-img/streamBest.wav"></audio>
+
+        <a-asset-item id="tree1" src="https://sdykes3.github.io/forestVR/my-img/models/Tree Type3 04.dae"></a-asset-item>
+
+      </a-assets>
+
+
+      <!--Panorama default -->
+      <a-sky id="pano" src="#woc"></a-sky>
+
+
+      <!-- 1. Forest objects -->
+      <a-entity id="forestStuff" visible="false">
+        <a-sky id="pano" src="#forestPano" color="white"></a-sky>
+        
+        <a-entity collada-model="#tree1" onclick="showTextForest1()" position="-2 -1 0"></a-entity>
+        <a-entity collada-model="#tree1" onclick="showTextForest2()" position="-4 -1 8" scale=".5 .5 .5" rotation="0 110 0"></a-entity>
+        <a-entity collada-model="#tree1" onclick="showTextForest3()" position="6 -1 -4" rotation="0 190 0"></a-entity>
+        <a-entity collada-model="#tree1" onclick="showTextForest4()" position="13 -1 6" scale="3 3 3" rotation="0 90 0"></a-entity>
+
+        <a-text id="treeText1" text="The original forests of the Piedmont consisted mainly of oak and hickory trees." 
+          visible="false" color="white" position="-4 -2 1" rotation= "0 20 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="treeText4" text="Oak and poplar trees are among the largest found here, growing up to 156ft tall and dominating the canpoy." 
+          visible="false" color="white" position="6 -1 3" rotation= "0 250 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="treeText3" text="Yellow poplars (Liriodendron tulipifera) make up roughly 20 percent of the forest trees." 
+          visible="false" color="white" position="1 -1 -2" rotation= "0 320 0" scale="1.5 1.5 1.5" width="300" align="center"></a-text>
+        <a-text id="treeText2" text="Pine trees, such as the loblolly pine (Pinus taeda), are relatively uncommon here. This is in sharp contrast to modern vegetation patterns." 
+          visible="false" color="white" position="-2 -2.2 9" rotation= "0 120 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+      </a-entity>
+
+
+      <!-- 1. Creek objects -->
+      <a-entity id="creekStuff" visible="false">
+        <a-sky id="pano" src="#creekPano" color="white"></a-sky>
+
+        <a-entity collada-model="#tree1" onclick="showTextCreek1()" position="7 0 -7"></a-entity>
+        <a-entity collada-model="#tree1" onclick="showTextCreek3()" position="7 -1 14"></a-entity>
+        <a-entity collada-model="#tree1" onclick="showTextCreek4()" position="13 -1 7" scale="3 3 3" rotation="-15 90 0"></a-entity>
+        <a-entity collada-model="#tree1" onclick="showTextCreek2()" position="-21 -1 0" scale="3 3 3" rotation="0 90 0"></a-entity>
+
+
+        <a-text id="creekText1" text="The Piedmont is known for its old, highly weathered, and fairly nutrient-poor soils." 
+          visible="false" color="white" position="1 -1 -3" rotation= "0 310 0" scale="2 2 2" width="600" align="center"></a-text>
+        <a-text id="creekText2" text="Many modern invasive species such as bamboo, English ivy, honeysuckle (Lonicera japonica), and privet were not present in the original forests."
+          visible="false" color="white" position="-5 -1 8" rotation= "0 90 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="creekText3" text="Some ancient streams no longer exist, due either to changing geography or intentional re-routing. Clear Creek is one such example in Atlanta." 
+          visible="false" color="white" position="2 1 8" rotation= "0 180 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="creekText4" text="Native wildlife includes raccoons, opossums, gray squirrels, chipmunks, American crows, pileated woodpeckers, box turtles, and several snake species, including the venomous copperhead."
+          visible="false" color="white" position="4 1 0" rotation= "0 280 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+      </a-entity>
+
+
+      <!-- 1. Default scene objects -->
+
+      <a-entity id="primitiveStuff" visible="true">
+        <a-sky id="pano" src="#woc" color="white"></a-sky>
+
+        <a-text id="defText1" text="The Piedmont is a plateau region located in the eastern United States. It spans several states." 
+          visible="true" color="green" position="4 1 2" rotation= "0 270 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="defText2" text="Little original vegetation in this area exists. In the Atlanta area, only Fernbank Museum of Natural History has original forest growth, spanning 65-acres."
+          visible="true" color="yellow" position="-4 1 7" rotation= "0 90 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="defText3" text="Modern development and invasive species has transformed the landscape, making it difficult to imagine the way the region used to be. This VR experience aims to educate and immerse the user in the forests of the past." 
+          visible="true" color="blue" position="3 1 8" rotation= "0 180 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+        <a-text id="defText4" text="Tap trees for information about the area." 
+          visible="true" color="blue" position="3 -0.75 8" rotation= "0 180 0" scale="1.5 1.5 1.5" width="600" align="center"></a-text>
+ 
+      </a-entity>
+
+
+      <!-- 2. Text.-->
+      </a-entity id="textStuff" visible="true">
+        <a-text id="debugText" text="The current distance will be displayed here."
+                 color="white" position="-3.5 1 1" rotation= "0 40 0" scale="1.5 1.5 1.5" width="350" align="right">
+        </a-text>
+
+        <a-text id="debugText2" text="The current distance will be displayed here."
+                 color="white" position="1.5 1 0" rotation= "0 -40 0" scale="1.5 1.5 1.5" width="350" align="left">
+        </a-text>
+
+        <a-text id="instrText" text="Go to the Forest location."
+                 color="white" position="-3.5 3 1" rotation= "0 40 0" scale="1.5 1.5 1.5" width="350" align="right">
+        </a-text>
+
+        <a-text id="instrText2" text="Go to the Creek location."
+                 color="white" position="1.5 3 0" rotation= "0 -40 0" scale="1.5 1.5 1.5" width="350" align="left">
+        </a-text>
+      </a-entity>
+
+
+      <!-- 3. Debug scene change function calls.-->
+<!--       <a-sphere onclick="forestScene()" position="-5 6 -3" radius="0.5" color="green" opacity="1"></a-sphere>
+      <a-sphere onclick="defaultScene()" position="0 6 -3" radius="0.5" color="#EF2D5E" opacity="1"></a-sphere>
+      <a-sphere onclick="creekScene()" position="5 6 -3" radius="0.5" color="blue" opacity="1"></a-sphere> -->
+
+
+      <!--The cursor-->
+      <a-entity position="0 0 3.8">
+             <a-camera>
+                 <a-cursor color="#359763"
+                   fuse="false">
+                   <a-animation begin="fusing" easing="ease-in" attribute="material.color"
+                               fill="forwards" from="#2E3A87" to="white" dur="1500"></a-animation>
+                  <a-animation begin="click" easing="ease-in" attribute="material.color"
+                               fill="forwards" from="white" to="#2E3A87" dur="150"></a-animation>
+             </a-cursor>
+             </a-camera>
+      </a-entity>
+
+
+    </a-scene>
+
+    <!--including scripts -->
+    <script src="circleDistanceScript.js"></script>
+    <script src="sceneControllerStartCampus.js"></script>
+    <script src="sceneControllerFunctions.js"></script>
+
+    <script>
+
+      // Basic geolocation calls
+      function geo_success(position) {
+        console.log("Lat " + position.coords.latitude + " Long " + position.coords.longitude);
+        checkReceivedLocation(position);
+      }
+
+      function geo_error() {
+        alert("Sorry, no position available.");
+      }
+
+      var geo_options = {
+        enableHighAccuracy: true, 
+        maximumAge        : 30000, 
+        timeout           : 27000
+      };
+
+      var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_options);
+
+
+    </script>
+
+  </body>
+</html>
